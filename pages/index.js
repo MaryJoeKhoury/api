@@ -35,6 +35,8 @@ export default function Home({ data }) {
               image={info.details.image}
               title={info.title}
               description={parse(info.details.text)}
+              date={info.details.cta_text}
+              link={info.details.cta_link}
             />
           );
         })}
