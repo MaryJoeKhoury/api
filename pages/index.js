@@ -1,64 +1,15 @@
+import axios from "@/utils/axios";
 import AlignContainer from "@/components/AlignContainer";
 import { Card } from "@/components/Card";
 import CardContainer from "@/components/CardContainer";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
+import parse from "html-react-parser";
 
-const cardInfo = [
-  {
-    id: 1,
-    image: "/images/donut.jpg",
-    title: "Dunkin' Donuts",
-    description: "Delicious",
-    link: "https://www.dunkindonuts.com/en/menu",
-  },
-  {
-    id: 2,
-    image: "/images/hotel.jpg",
-    title: "Hotel",
-    description: "5 Stars",
-    link: "https://www.trivago.com/",
-  },
-  {
-    id: 3,
-    image: "/images/mcd.jpg",
-    title: "MacDonald's",
-    description: "Best Food in Town",
-    link: "https://www.mcdonalds.com.lb/en/home",
-  },
-  {
-    id: 2,
-    image: "/images/hotel.jpg",
-    title: "Hotel",
-    description: "5 Stars",
-  },
-  {
-    id: 2,
-    image: "/images/hotel.jpg",
-    title: "Hotel",
-    description: "5 Stars",
-  },
-  {
-    id: 3,
-    image: "/images/mcd.jpg",
-    title: "MacDonald's",
-    description: "Best Food in Town",
-  },
-  {
-    id: 3,
-    image: "/images/mcd.jpg",
-    title: "MacDonald's",
-    description: "Best Food in Town",
-  },
-  {
-    id: 1,
-    image: "/images/donut.jpg",
-    title: "Dunkin' Donuts",
-    description: "Delicious",
-  },
-];
-
-export default function Home() {
+export default function Home({ data }) {
+  console.log(data);
+  // {
+  // data.data.sections.map((info) => {
   return (
     <>
       <NavBar />
@@ -77,16 +28,35 @@ export default function Home() {
       </AlignContainer>
 
       <CardContainer>
-        {cardInfo.map((info) => (
-          <Card
-            image={info.image}
-            title={info.title}
-            description={info.description}
-            link={info.link}
-          />
-        ))}
+        {data.data.sections.map((info) => {
+          return (
+            <Card
+              key={info.id}
+              image={info.details.image}
+              title={info.title}
+              description={parse(info.details.text)}
+            />
+          );
+        })}
       </CardContainer>
       <Footer />
     </>
   );
+  // });
+  // }
+}
+
+export async function getStaticProps({ locale }) {
+  let data;
+  await axios
+    .get("/page/news", {
+      headers: {
+        "Accept-Language": locale,
+      },
+    })
+    .then((res) => {
+      data = res.data;
+    })
+    .catch(console.error);
+  return { props: { data } };
 }

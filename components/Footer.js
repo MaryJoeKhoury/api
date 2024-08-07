@@ -61,10 +61,16 @@ const Footer = () => {
         </div>
         <div className="flex sm:flex-row flex-col  sm:items-center items-start sm:gap-0 gap-4 justify-between mt-6">
           <div className="flex flex-row text-4xl items-center gap-4 ">
-            <div>LOGO </div>
+            <div>
+              <a href="#">LOGO</a>{" "}
+            </div>
             <span className=" h-10 border-solid border-[1px] border-white rounded-lg"></span>
-            <Linkedin />
-            <Instagram />
+            <a href="https://www.linkedin.com/">
+              <Linkedin />
+            </a>
+            <a href="https://www.instagram.com/">
+              <Instagram />
+            </a>
           </div>
           <div className="flex flex-row text-sm items-center gap-2 ">
             <a href="#">privacy policy</a>

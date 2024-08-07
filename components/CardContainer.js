@@ -3,9 +3,10 @@ import AlignContainer from "./AlignContainer";
 const CardContainer = (props) => {
   return (
     <AlignContainer>
-      <div className="flex  items-center justify-center flex-row flex-wrap align-middle  text-white">
+      <ul className="flex items-center justify-center flex-row flex-wrap   text-white">
+        {/* <div className="flex">{props.children}</div> */}
         {props.children}
-      </div>
+      </ul>
     </AlignContainer>
   );
 };
