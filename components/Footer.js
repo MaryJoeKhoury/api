@@ -12,19 +12,44 @@ const Footer = () => {
             <h5 className="text-xl mb-6 font-light">sitemap</h5>
             <ul className="font-semibold">
               <li>
-                <a href="#">about us</a>
+                <a
+                  href="#"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  about us
+                </a>
               </li>
               <li>
-                <a href="#">our work</a>
+                <a
+                  href="#"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  our work
+                </a>
               </li>
               <li>
-                <a href="#">our clients</a>
+                <a
+                  href="#"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  our clients
+                </a>
               </li>
               <li>
-                <a href="#">our teams</a>
+                <a
+                  href="#"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  our teams
+                </a>
               </li>
               <li>
-                <a href="#">contact us</a>
+                <a
+                  href="#"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  contact us
+                </a>
               </li>
             </ul>
           </div>
@@ -32,19 +57,44 @@ const Footer = () => {
             <h1 className="text-xl mb-6 font-light">offices</h1>
             <ul className="font-semibold">
               <li>
-                <a href="#">beirut,LEBANON</a>
+                <a
+                  href="#"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  beirut,LEBANON
+                </a>
               </li>
               <li>
-                <a href="#">moscow,RUSSIA</a>
+                <a
+                  href="#"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  moscow,RUSSIA
+                </a>
               </li>
               <li>
-                <a href="#">paris,FRANCE</a>
+                <a
+                  href="#"
+                  className="relative after:absolute after:h-[2px]  after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  paris,FRANCE
+                </a>
               </li>
               <li>
-                <a href="#">berlin,GERMANY</a>
+                <a
+                  href="#"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  berlin,GERMANY
+                </a>
               </li>
               <li>
-                <a href="#">madrid,SPAIN</a>
+                <a
+                  href="#"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  madrid,SPAIN
+                </a>
               </li>
             </ul>
           </div>
@@ -54,7 +104,12 @@ const Footer = () => {
             </h1>
             <ul>
               <li>
-                <a href="#">test@test.com</a>
+                <a
+                  href="#"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  test@test.com
+                </a>
               </li>
             </ul>
           </div>
@@ -72,7 +127,7 @@ const Footer = () => {
               <Instagram />
             </a>
           </div>
-          <div className="flex flex-row text-sm items-center gap-2 ">
+          <div className="flex flex-row text-sm items-center gap-2 relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150">
             <a href="#">privacy policy</a>
             <span className=" h-6 border-solid border-[1px] border-white rounded-lg"></span>
             <a href="#">terms and conditions</a>

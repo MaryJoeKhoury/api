@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import AlignContainer from "./AlignContainer";
 import Navigation from "./svgs/Navigation";
 import Close from "./svgs/Close";
-
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 const NavBar = () => {
   const [menuActive, setMenuActive] = useState(false);
   const handleMobileMenu = () => {
     setMenuActive(!menuActive);
   };
-
+  const pathname = usePathname();
   return (
     <>
       <div>
@@ -22,23 +23,53 @@ const NavBar = () => {
 
             <ul className="flex flex-row gap-8 text-lg text-zinc-400 font-semibold">
               <li>
-                <a href="#">about us</a>
+                <Link
+                  href="/about"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  about us
+                </Link>
               </li>
               <li>
-                <a href="#">our work</a>
+                <Link
+                  href="/"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  our work
+                </Link>
               </li>
               <li>
-                <a href="#">our clients</a>
+                <a
+                  href="#"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  our clients
+                </a>
               </li>
               <li>
-                <a href="#">our team</a>
+                <a
+                  href="#"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  our team
+                </a>
               </li>
               <li>
-                <a href="#">contact us</a>
+                <a
+                  href="#"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  contact us
+                </a>
               </li>
-              <li>
-                <a href="#">lang</a>
-              </li>
+              {/* <li>
+                <a
+                  href="#"
+                  className="relative after:absolute after:h-1 after:w-0 after:-bottom-2 after:bg-red-400 after:rounded-md after:m-auto after:right-1 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                >
+                  lang
+                </a>
+              </li> */}
             </ul>
           </div>
         </AlignContainer>

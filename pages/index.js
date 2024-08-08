@@ -8,8 +8,7 @@ import parse from "html-react-parser";
 
 export default function Home({ data }) {
   console.log(data);
-  // {
-  // data.data.sections.map((info) => {
+
   return (
     <>
       <NavBar />
@@ -44,8 +43,6 @@ export default function Home({ data }) {
       <Footer />
     </>
   );
-  // });
-  // }
 }
 
 export async function getStaticProps({ locale }) {
