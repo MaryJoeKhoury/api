@@ -40,7 +40,9 @@ export default function Page({ data }) {
             <div className="flex flex-col gap-2 ">
               <div className="text-2xl">CLIENT: {post.client}</div>
               <div className="text-2xl">DIRECTOR(S): {post.directors}</div>
-              <div className="text-2xl">DP: {post.cinematographer}</div>
+              {post.cinematographer && (
+                <div className="text-2xl">DP: {post.cinematographer}</div>
+              )}
               <div className="text-2xl">AGENCY: {post.agency}</div>
             </div>
           </div>
