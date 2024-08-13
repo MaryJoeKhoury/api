@@ -4,13 +4,15 @@ import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import { useRouter } from "next/router";
 import AlignContainer from "@/components/AlignContainer";
+import Link from "next/link";
 
-export default function Page({ data }) {
+export default function Page() {
   const router = useRouter();
-  console.log(router);
   const { id } = router.query;
   const [isLoading, setIsLoading] = useState(false);
-  const [post, setPost] = useState({});
+  const [project, setProject] = useState({});
+  const [prevId, setPrevId] = useState({});
+  const [nextId, setNextId] = useState({});
 
   useEffect(() => {
     if (id) {
@@ -18,8 +20,23 @@ export default function Page({ data }) {
       axios
         .get(`/projects/`)
         .then((response) => {
-          const singlePost = response.data.data.find((post) => post.id == id);
-          setPost(singlePost);
+          const projects = response.data.data;
+          const currentIndex = projects.findIndex(
+            (project) => project.id == id
+          );
+          const singleProject = projects[currentIndex];
+          setProject(singleProject);
+          if (currentIndex > 0) {
+            setPrevId(projects[currentIndex - 1].id);
+          } else {
+            setPrevId(null);
+          }
+
+          if (currentIndex < projects.length - 1) {
+            setNextId(projects[currentIndex + 1].id);
+          } else {
+            setNextId(null);
+          }
         })
         .finally(() => setIsLoading(false));
     }
@@ -33,25 +50,52 @@ export default function Page({ data }) {
 
       <AlignContainer>
         <div className="text-white flex flex-col items-center justify-center gap-10 flex-wrap max-w-4xl m-auto">
-          <img src={post.image} className="rounded-3xl" />
-          <h1 className="text-xl">{post.title}</h1>
-          <div className="flex flex-row justify-between flex-wrap font-semibold px-8">
-            <div className="text-2xl w-1/2">{post.text}</div>
+          <img src={project.image} className="rounded-3xl" />
+          <h1 className="text-xl">{project.title}</h1>
+          <div className="flex md:flex-row md:justify-between font-semibold px-8 flex-col gap-4 ">
+            {project.text && (
+              <div className="md:text-2xl text-lg md:w-1/2">{project.text}</div>
+            )}
             <div className="flex flex-col gap-2 ">
-              <div className="text-2xl">CLIENT: {post.client}</div>
-              <div className="text-2xl">DIRECTOR(S): {post.directors}</div>
-              {post.cinematographer && (
-                <div className="text-2xl">DP: {post.cinematographer}</div>
+              {project.client && (
+                <div className="md:text-2xl text-lg">
+                  CLIENT: {project.client}
+                </div>
               )}
-              <div className="text-2xl">AGENCY: {post.agency}</div>
+              {project.directors && (
+                <div className="md:text-2xl text-lg">
+                  DIRECTOR(S): {project.directors}
+                </div>
+              )}
+              {project.cinematographer && (
+                <div className="md:text-2xl text-lg">
+                  DP: {project.cinematographer}
+                </div>
+              )}
+              {project.agency && (
+                <div className="md:text-2xl text-lg">
+                  AGENCY: {project.agency}
+                </div>
+              )}
             </div>
           </div>
-          {/* <div className="text-[#fe424c] text-4xl">Extra data</div> */}
-          {/* <div>
-            <div>{post.colorist}</div>
-            <div>{post.seo_title}</div>
-            <div>{post.seo_description}</div>
-          </div> */}
+        </div>
+        <div className="text-white flex flex-row gap-4 items-center mt-8 md:justify-end justify-center font-semibold text-lg">
+          {prevId && (
+            <Link href={`/about/${prevId}`} className="hover:underline">
+              Previous
+            </Link>
+          )}
+
+          <span className="h-4 border-solid border-[2px] border-white rounded-lg"></span>
+          <p className="text-gray-500">Our Work</p>
+          <span className="h-4 border-solid border-[2px] border-white rounded-lg"></span>
+
+          {nextId && (
+            <Link href={`/about/${nextId}`} className="hover:underline">
+              Next
+            </Link>
+          )}
         </div>
       </AlignContainer>
 
