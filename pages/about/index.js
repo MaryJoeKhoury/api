@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import axios from "@/utils/axios";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
@@ -7,20 +7,19 @@ import FlipCard from "@/components/FlipCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-// import "./styles.css";
 import { Navigation } from "swiper/modules";
 
-export default function ({ data }) {
-  console.log(data);
+export default function About({ data }) {
   const [swiperRef, setSwiperRef] = useState(null);
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    axios.get("/projects").then((response) => setPosts(response.data.data));
+  }, []);
   return (
     <>
       <NavBar />
       <Swiper
-        // slidesPerView={4}
-        // spaceBetween={20}
         loop={true}
-        loopedSlides={4}
         navigation={false}
         modules={[Navigation]}
         className="mySwiper"
@@ -52,15 +51,16 @@ export default function ({ data }) {
           },
         }}
       >
-        {data.data.map((info) => {
+        {posts.map((post) => {
           return (
             <SwiperSlide>
               <FlipCard
-                key={info.id}
-                image={info.image}
-                title={info.title}
-                description={info.description}
-                text={info.text}
+                key={post.id}
+                image={post.image}
+                title={post.title}
+                description={post.description}
+                text={post.text}
+                link={`/about/${post.id}`}
               />
             </SwiperSlide>
           );
@@ -69,19 +69,4 @@ export default function ({ data }) {
       <Footer />
     </>
   );
-}
-
-export async function getStaticProps({ locale }) {
-  let data;
-  await axios
-    .get("/projects", {
-      headers: {
-        "Accept-Language": locale,
-      },
-    })
-    .then((res) => {
-      data = res.data;
-    })
-    .catch(console.error);
-  return { props: { data } };
 }
