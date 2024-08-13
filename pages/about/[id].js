@@ -82,19 +82,23 @@ export default function Page() {
         </div>
         <div className="text-white flex flex-row gap-4 items-center mt-8 md:justify-end justify-center font-semibold text-lg">
           {prevId && (
-            <Link href={`/about/${prevId}`} className="hover:underline">
-              Previous
-            </Link>
+            <>
+              <Link href={`/about/${prevId}`} className="hover:underline">
+                Previous
+              </Link>
+              <span className="h-4 border-solid border-[2px] border-white rounded-lg"></span>
+            </>
           )}
 
-          <span className="h-4 border-solid border-[2px] border-white rounded-lg"></span>
           <p className="text-gray-500">Our Work</p>
-          <span className="h-4 border-solid border-[2px] border-white rounded-lg"></span>
 
           {nextId && (
-            <Link href={`/about/${nextId}`} className="hover:underline">
-              Next
-            </Link>
+            <>
+              <span className="h-4 border-solid border-[2px] border-white rounded-lg"></span>
+              <Link href={`/about/${nextId}`} className="hover:underline">
+                Next
+              </Link>
+            </>
           )}
         </div>
       </AlignContainer>
