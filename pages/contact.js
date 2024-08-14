@@ -76,7 +76,7 @@ export default function Contact() {
               type="submit"
               name="button"
               placeholder="Submit"
-              className="bg-[#00a3bb] cursor-pointer outline-none w-fit mx-auto px-4 py-2  rounded-lg text-white hover:bg-opacity-50"
+              className="bg-[#fe424c] cursor-pointer outline-none w-fit mx-auto px-4 py-2  rounded-lg text-white hover:bg-opacity-50"
             />
           </form>
         </div>

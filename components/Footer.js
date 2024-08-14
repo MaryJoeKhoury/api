@@ -2,6 +2,7 @@ import React from "react";
 import AlignContainer from "./AlignContainer";
 import Linkedin from "@/components/svgs/Linkedin";
 import Instagram from "./svgs/Instagram";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -12,20 +13,20 @@ const Footer = () => {
             <h5 className="text-xl mb-6 font-light">sitemap</h5>
             <ul className="font-semibold">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/about"
                   className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                 >
                   about us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                 >
                   our work
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -44,12 +45,12 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/contact"
                   className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                 >
                   contact us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -25,7 +25,11 @@ const NavBar = () => {
               <li>
                 <Link
                   href="/about"
-                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                  className={`${
+                    pathname === "/about"
+                      ? "relative after:absolute after:h-[2px]  after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 after:w-2/4 translate-x-1 text-white after:inset-5 after:scale-1 "
+                      : "relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                  } `}
                 >
                   about us
                 </Link>
@@ -33,7 +37,11 @@ const NavBar = () => {
               <li>
                 <Link
                   href="/"
-                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                  className={`${
+                    pathname === "/"
+                      ? "relative after:absolute after:h-[2px]  after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 after:w-2/4 translate-x-1 text-white after:inset-5 after:scale-1 "
+                      : "relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                  } `}
                 >
                   our work
                 </Link>
@@ -57,7 +65,11 @@ const NavBar = () => {
               <li>
                 <Link
                   href="/contact"
-                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                  className={`${
+                    pathname === "/contact"
+                      ? "relative after:absolute after:h-[2px]  after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 after:w-2/4 translate-x-1 text-white after:inset-5 after:scale-1 "
+                      : "relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                  } `}
                 >
                   contact us
                 </Link>
