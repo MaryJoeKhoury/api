@@ -55,12 +55,12 @@ const NavBar = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/contact"
                   className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                 >
                   contact us
-                </a>
+                </Link>
               </li>
               {/* <li>
                 <a
@@ -86,14 +86,14 @@ const NavBar = () => {
         </li>
         <ul className="space-y-10">
           <li>
-            <a href="#" className="font-bold text-white">
+            <Link href="/about" className="font-bold text-white">
               about us
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="font-bold text-white">
+            <Link href="/" className="font-bold text-white">
               our work
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#" className="font-bold text-white">
@@ -106,7 +106,9 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a className="font-bold text-white">contact-us</a>
+            <Link href="/contact" className="font-bold text-white">
+              contact-us
+            </Link>
           </li>
         </ul>
       </div>
