@@ -5,6 +5,7 @@ import Accordion from "@/components/Accordion";
 import AlignContainer from "@/components/AlignContainer";
 import CardContainer from "@/components/CardContainer";
 import { Card } from "@/components/Card";
+import axios from "@/utils/axios";
 
 const accordionInfo = [
   {
@@ -51,7 +52,7 @@ const cardInfo = [
   { id: "19", image: "/images/coding.webp", title: "sport", type: "sport" },
 ];
 
-export default function Team() {
+export default function Team({ metas, links }) {
   const [activeIndex, setActiveIndex] = useState(null);
   const [filteredType, setFilteredType] = useState(cardInfo);
   const [selectedType, setSelectedType] = useState("all");
@@ -84,7 +85,7 @@ export default function Team() {
   };
   return (
     <div className="">
-      <NavBar />
+      <NavBar image={metas.data.seo_image} />
 
       {accordionInfo.map((info) => (
         <Accordion
@@ -177,19 +178,7 @@ export default function Team() {
             </button>
           </div>
         )}
-        {visibleItemCount >= filteredType.length &&
-          filteredType.length >= 6 && (
-            <div className="w-fit m-auto" onClick={handleViewMore}>
-              <button
-                type="button"
-                disabled
-                className="bg-[#fe424c] px-4 py-2 cursor-not-allowed rounded-md text-white bg-opacity-20 "
-              >
-                View More
-              </button>
-            </div>
-          )}
-        {/* {filteredType.length > 6 && (
+        {visibleItemCount >= filteredType.length && filteredType.length > 6 && (
           <div className="w-fit m-auto" onClick={handleViewMore}>
             <button
               type="button"
@@ -199,9 +188,40 @@ export default function Team() {
               View More
             </button>
           </div>
-        )} */}
+        )}
       </AlignContainer>
-      <Footer />
+      <Footer
+        linkedin={links.data.social_media.en.Linkedin}
+        instagram={links.data.social_media.en.Instagram}
+      />
     </div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  let metas, links;
+  await axios
+    .get("/page/home", {
+      headers: {
+        "Accept-Language": locale,
+      },
+    })
+    .then((res) => {
+      metas = res.data;
+    })
+    .catch(console.error);
+
+  await axios;
+
+  await axios
+    .get("/settings", {
+      headers: {
+        "Accept-Language": locale,
+      },
+    })
+    .then((res) => {
+      links = res.data;
+    })
+    .catch(console.error);
+  return { props: { metas, links } };
 }

@@ -6,12 +6,12 @@ import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import parse from "html-react-parser";
 
-export default function Home({ data }) {
-  console.log(data);
+export default function Home({ metas, data, links }) {
+  console.log(metas);
 
   return (
     <>
-      <NavBar />
+      <NavBar image={metas.data.seo_image} />
       <AlignContainer>
         <div className="text-white text-center md:text-7xl  md:px-8 mb-36 mt-16 text-5xl">
           <h1>
@@ -40,13 +40,27 @@ export default function Home({ data }) {
           );
         })}
       </CardContainer>
-      <Footer />
+      <Footer
+        linkedin={links.data.social_media.en.Linkedin}
+        instagram={links.data.social_media.en.Instagram}
+      />
     </>
   );
 }
 
 export async function getStaticProps({ locale }) {
-  let data;
+  let metas, data, links;
+  await axios
+    .get("/page/home", {
+      headers: {
+        "Accept-Language": locale,
+      },
+    })
+    .then((res) => {
+      metas = res.data;
+    })
+    .catch(console.error);
+
   await axios
     .get("/page/news", {
       headers: {
@@ -57,5 +71,15 @@ export async function getStaticProps({ locale }) {
       data = res.data;
     })
     .catch(console.error);
-  return { props: { data } };
+  await axios
+    .get("/settings", {
+      headers: {
+        "Accept-Language": locale,
+      },
+    })
+    .then((res) => {
+      links = res.data;
+    })
+    .catch(console.error);
+  return { props: { metas, data, links } };
 }

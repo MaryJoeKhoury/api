@@ -4,7 +4,7 @@ import Linkedin from "@/components/svgs/Linkedin";
 import Instagram from "./svgs/Instagram";
 import Link from "next/link";
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <div className="bg-[#fe424c] text-white py-12 mt-12">
       <AlignContainer>
@@ -121,10 +121,10 @@ const Footer = () => {
               <a href="#">LOGO</a>{" "}
             </div>
             <span className=" h-10 border-solid border-[1px] border-white rounded-lg"></span>
-            <a href="https://www.linkedin.com/">
+            <a href={props.linkedin}>
               <Linkedin />
             </a>
-            <a href="https://www.instagram.com/">
+            <a href={props.instagram}>
               <Instagram />
             </a>
           </div>

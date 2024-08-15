@@ -13,6 +13,8 @@ export default function Page() {
   const [project, setProject] = useState({});
   const [prevId, setPrevId] = useState({});
   const [nextId, setNextId] = useState({});
+  const [metas, setMetas] = useState(null);
+  const [links, setLinks] = useState(null);
 
   useEffect(() => {
     if (id) {
@@ -42,11 +44,22 @@ export default function Page() {
     }
   }, [id]);
 
+  useEffect(() => {
+    axios.get("/page/home").then((response) => {
+      setMetas(response.data.data);
+    });
+  }, []);
+  useEffect(() => {
+    axios.get("/settings").then((response) => {
+      setLinks(response.data.data);
+    });
+  }, []);
+
   if (isLoading) return <p className="text-cyan-700">Loading...</p>;
 
   return (
     <>
-      <NavBar />
+      <NavBar image={metas?.seo_image} />
 
       <AlignContainer>
         <div className="text-white flex flex-col items-center justify-center gap-10 flex-wrap max-w-4xl m-auto">
@@ -103,7 +116,10 @@ export default function Page() {
         </div>
       </AlignContainer>
 
-      <Footer />
+      <Footer
+        linkedin={links?.social_media.en.Linkedin}
+        instagram={links?.social_media.en.Instagram}
+      />
     </>
   );
 }

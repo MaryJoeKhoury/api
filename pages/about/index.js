@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
-export default function About({ data }) {
+export default function About({ data, metas }) {
   const [swiperRef, setSwiperRef] = useState(null);
   const [posts, setPosts] = useState([]);
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function About({ data }) {
   }, []);
   return (
     <>
-      <NavBar />
+      <NavBar image={metas.data.seo_image} />
       <Swiper
         loop={true}
         navigation={false}
@@ -69,4 +69,40 @@ export default function About({ data }) {
       <Footer />
     </>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  let metas, data, links;
+  await axios
+    .get("/page/home", {
+      headers: {
+        "Accept-Language": locale,
+      },
+    })
+    .then((res) => {
+      metas = res.data;
+    })
+    .catch(console.error);
+
+  await axios
+    .get("/page/news", {
+      headers: {
+        "Accept-Language": locale,
+      },
+    })
+    .then((res) => {
+      data = res.data;
+    })
+    .catch(console.error);
+  await axios
+    .get("/settings", {
+      headers: {
+        "Accept-Language": locale,
+      },
+    })
+    .then((res) => {
+      links = res.data;
+    })
+    .catch(console.error);
+  return { props: { metas, data, links } };
 }

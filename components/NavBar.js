@@ -1,25 +1,31 @@
+import axios from "@/utils/axios";
 import React, { useState, useEffect } from "react";
 import AlignContainer from "./AlignContainer";
 import Navigation from "./svgs/Navigation";
 import Close from "./svgs/Close";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-const NavBar = () => {
+
+const NavBar = (props) => {
+  // console.log(data);
   const [menuActive, setMenuActive] = useState(false);
   const handleMobileMenu = () => {
     setMenuActive(!menuActive);
   };
   const pathname = usePathname();
+
   return (
     <>
       <div>
+        {/* {metas.data.map((item) => { */}
+        {/* return ( */}
         <AlignContainer>
           <div className=" hidden md:flex flex-row justify-between py-8 items-center">
-            <div className="border-2 border-white border-solid w-12 h-12 rounded-full p-12 flex items-center justify-center">
-              <a href="#" className="text-2xl text-white">
-                Logo
-              </a>
-            </div>
+            {/* <div className="bg-white"> */}
+            <Link href="/">
+              <img src={props.image} className="bg-white w-48" />
+            </Link>
+            {/* </div> */}
 
             <ul className="flex flex-row gap-8 text-lg text-zinc-400 font-semibold">
               <li>
@@ -36,9 +42,9 @@ const NavBar = () => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/work"
                   className={`${
-                    pathname === "/"
+                    pathname === "/work"
                       ? "relative after:absolute after:h-[2px]  after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 after:w-2/4 translate-x-1 text-white after:inset-5 after:scale-1 "
                       : "relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                   } `}
@@ -47,12 +53,16 @@ const NavBar = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                <Link
+                  href="/client"
+                  className={`${
+                    pathname === "/client"
+                      ? "relative after:absolute after:h-[2px]  after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 after:w-2/4 translate-x-1 text-white after:inset-5 after:scale-1 "
+                      : "relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                  } `}
                 >
                   our clients
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
@@ -89,8 +99,9 @@ const NavBar = () => {
             </ul>
           </div>
         </AlignContainer>
+        {/* );
+        })} */}
       </div>
-
       <div
         className={`fixed right-0 top-0 flex h-screen w-full transform flex-col items-cente gap-20 bg-black text-center text-2xl md:hidden ${
           menuActive ? "translate-x-0" : "translate-x-full"
@@ -128,13 +139,12 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-
       <ul className="flex w-full items-center justify-center  px-2 py-8 align-middle md:hidden">
-        <div className="border-2 border-white border-solid w-12 h-12 rounded-full p-8 flex items-center justify-center">
-          <a href="#" className="text-2xl text-white">
-            Logo
-          </a>
-        </div>
+        {/* <div className="border-2 border-white border-solid w-12 h-12 rounded-full p-8 flex items-center justify-center"> */}
+        <Link href="/">
+          <img src={props.image} className="bg-white w-40" />
+        </Link>
+        {/* </div> */}
         <li className="mr-4 last:ml-auto">
           <button className="md:hidden">
             <div
@@ -154,3 +164,44 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+// export async function getStaticProps({ locale }) {
+// let links, metas;
+
+// await axios
+//   .get("/settings", {
+//     headers: {
+//       "Accept-Language": locale,
+//     },
+//   })
+//   .then((res) => {
+//     links = res.data;
+//   })
+//   .catch(console.error);
+// await axios
+//   .get("/page/news", {
+//     headers: {
+//       "Accept-Language": locale,
+//     },
+//   })
+//   .then((res) => {
+//     metas = res.data;
+//   })
+//   .catch(console.error);
+// return { props: { metas } };
+// }
+
+export async function getStaticProps({ locale }) {
+  let metas;
+  await axios
+    .get("/page/news", {
+      headers: {
+        "Accept-Language": locale,
+      },
+    })
+    .then((res) => {
+      metas = res.data;
+    })
+    .catch(console.error);
+  return { props: { metas } };
+}

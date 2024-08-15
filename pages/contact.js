@@ -4,11 +4,12 @@ import AlignContainer from "@/components/AlignContainer";
 import Map from "@/components/svgs/Map";
 import Phone from "@/components/svgs/Phone";
 import Email from "@/components/svgs/Email";
+import axios from "@/utils/axios";
 
-export default function Contact() {
+export default function Contact({ metas, links }) {
   return (
     <>
-      <NavBar />
+      <NavBar image={metas.data.seo_image} />
       <AlignContainer>
         <div className="text-white flex md:flex-row md:justify-between my-12 flex-col md:items-stretch items-center gap-12">
           <div className="md:w-1/2">
@@ -82,7 +83,36 @@ export default function Contact() {
         </div>
       </AlignContainer>
 
-      <Footer />
+      <Footer
+        linkedin={links.data.social_media.en.Linkedin}
+        instagram={links.data.social_media.en.Instagram}
+      />
     </>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  let metas, links;
+  await axios
+    .get("/page/home", {
+      headers: {
+        "Accept-Language": locale,
+      },
+    })
+    .then((res) => {
+      metas = res.data;
+    })
+    .catch(console.error);
+
+  await axios
+    .get("/settings", {
+      headers: {
+        "Accept-Language": locale,
+      },
+    })
+    .then((res) => {
+      links = res.data;
+    })
+    .catch(console.error);
+  return { props: { metas, links } };
 }
