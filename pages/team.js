@@ -177,7 +177,19 @@ export default function Team() {
             </button>
           </div>
         )}
-        {visibleItemCount >= filteredType.length && (
+        {visibleItemCount >= filteredType.length &&
+          filteredType.length >= 6 && (
+            <div className="w-fit m-auto" onClick={handleViewMore}>
+              <button
+                type="button"
+                disabled
+                className="bg-[#fe424c] px-4 py-2 cursor-not-allowed rounded-md text-white bg-opacity-20 "
+              >
+                View More
+              </button>
+            </div>
+          )}
+        {/* {filteredType.length > 6 && (
           <div className="w-fit m-auto" onClick={handleViewMore}>
             <button
               type="button"
@@ -187,7 +199,7 @@ export default function Team() {
               View More
             </button>
           </div>
-        )}
+        )} */}
       </AlignContainer>
       <Footer />
     </div>
