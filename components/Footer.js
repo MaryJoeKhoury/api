@@ -37,12 +37,12 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/team"
                   className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                 >
                   our teams
-                </a>
+                </Link>
               </li>
               <li>
                 <Link

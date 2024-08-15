@@ -7,7 +7,7 @@ const Minus = (props) => (
     {...props}
   >
     <path
-      stroke="#000"
+      stroke="#fe424c"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}

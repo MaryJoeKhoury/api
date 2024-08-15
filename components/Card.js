@@ -9,7 +9,9 @@ export const Card = (props) => {
       >
         <img src={props.image} className="w-full " />
 
-        <h1 className=" my-2  text-2xl font-bold">{props.title}</h1>
+        <h1 className={` my-2  text-2xl font-bold ${props.margin}`}>
+          {props.title}
+        </h1>
         <div className="text-xl font-semibold">{props.description}</div>
         <div
           className="text-sm group-hover:underline

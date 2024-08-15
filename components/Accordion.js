@@ -6,13 +6,13 @@ import Minus from "./svgs/Minus";
 const Accordion = (props) => {
   return (
     <AlignContainer>
-      <div className="overflow-hidden text-white  bg-[#fe424c] ">
+      <div
+        className={`overflow-hidden text-white border-b-2 border-solid border-white duration-200`}
+      >
         <button
           onClick={props.onClick}
-          className={` ${
-            props.isOpen
-              ? ""
-              : "after:w-full after:h-[1px] after:left-0 after:bg-white after:absolute relative after:bottom-0"
+          className={` px-4 py-4 ${
+            props.isOpen ? "duration-300" : ""
           } flex w-full flex-row items-center   justify-between  px-4 py-4 text-left text-xl outline-none`}
         >
           <p>
@@ -23,13 +23,13 @@ const Accordion = (props) => {
           <Plus
             className={`w-4 duration-150 ${props.isOpen ? "hidden" : ""}`}
           />
-          <Minus className={`w-6 ${props.isOpen ? "" : "hidden"} `} />
+          <Minus className={`w-6 ${props.isOpen ? "" : "hidden "} `} />
         </button>
         <div
-          className={`${
+          className={`px-4 ${
             props.isOpen
-              ? "h-full px-4 text-black pb-4 duration-300 after:w-full after:h-[1px] after:left-0 after:bg-white after:absolute relative after:bottom-0"
-              : "h-0"
+              ? "h-full   text-white pb-4 duration-75 ease-in-out  "
+              : "h-0 duration-75 ease-in-out"
           } `}
         >
           <p>{props.details}</p>
