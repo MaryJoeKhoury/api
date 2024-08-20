@@ -13,7 +13,7 @@ export default function Contact({ metas, links }) {
       <AlignContainer>
         <div className="text-white flex md:flex-row md:justify-between my-12 flex-col md:items-stretch items-center gap-12">
           <div className="md:w-1/2">
-            <h1 className="text-5xl mb-12 decoration-wavy">
+            <h1 className="md:text-5xl text-4xl mb-12 decoration-wavy">
               Let's Get In Touch!
             </h1>
             <ul className="flex flex-col gap-12">

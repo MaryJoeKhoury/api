@@ -8,7 +8,7 @@ export default function Work({ metas, links }) {
     <>
       <NavBar image={metas.data.seo_image} />
       <AlignContainer>
-        <h1 className="text-white text-5xl text-center my-28">
+        <h1 className="text-white md:text-5xl text-3xl text-center my-28">
           COMING SOON...
         </h1>
       </AlignContainer>

@@ -88,19 +88,9 @@ const NavBar = (props) => {
                   contact us
                 </Link>
               </li>
-              {/* <li>
-                <a
-                  href="#"
-                  className="relative after:absolute after:h-1 after:w-0 after:-bottom-2 after:bg-red-400 after:rounded-md after:m-auto after:right-1 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
-                >
-                  lang
-                </a>
-              </li> */}
             </ul>
           </div>
         </AlignContainer>
-        {/* );
-        })} */}
       </div>
       <div
         className={`fixed right-0 top-0 flex h-screen w-full transform flex-col items-cente gap-20 bg-black text-center text-2xl md:hidden ${
@@ -118,19 +108,19 @@ const NavBar = (props) => {
             </Link>
           </li>
           <li>
-            <Link href="/" className="font-bold text-white">
+            <Link href="/work" className="font-bold text-white">
               our work
             </Link>
           </li>
           <li>
-            <a href="#" className="font-bold text-white">
+            <Link href="/client" className="font-bold text-white">
               our clients
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="font-bold text-white">
+            <Link href="/team" className="font-bold text-white">
               our team
-            </a>
+            </Link>
           </li>
           <li>
             <Link href="/contact" className="font-bold text-white">
