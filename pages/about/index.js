@@ -18,54 +18,54 @@ export default function About({ data, metas }) {
   return (
     <>
       <NavBar image={metas.data.seo_image} />
-      <Swiper
-        loop={true}
-        navigation={false}
-        modules={[Navigation]}
-        className="mySwiper"
-        breakpoints={{
-          320: {
-            slidesPerView: 1.3,
-            spaceBetween: 14,
-          },
-          480: {
-            slidesPerView: 1.4,
-            // spaceBetween: 30,
-          },
-          640: {
-            slidesPerView: 2.2,
-            spaceBetween: 30,
-            navigation: false,
-          },
-          768: {
-            slidesPerView: 2.4,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 2.4,
-            spaceBetween: 20,
-          },
-          1280: {
-            slidesPerView: 2.4,
-            spaceBetween: 20,
-          },
-        }}
-      >
-        {posts.map((post) => {
-          return (
-            <SwiperSlide>
-              <FlipCard
-                key={post.id}
-                image={post.image}
-                title={post.title}
-                description={post.description}
-                text={post.text}
-                link={`/about/${post.id}`}
-              />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+      <div className=" py-16 mb-12">
+        <Swiper
+          loop={true}
+          navigation={true}
+          modules={[Navigation]}
+          className="mySwiper"
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 14,
+            },
+            480: {
+              slidesPerView: 1,
+              // spaceBetween: 30,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1280: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          }}
+        >
+          {posts.map((post) => {
+            return (
+              <SwiperSlide>
+                <FlipCard
+                  key={post.id}
+                  image={post.image}
+                  title={post.title}
+                  text={post.text}
+                  link={`/about/${post.id}`}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
       <Footer />
     </>
   );

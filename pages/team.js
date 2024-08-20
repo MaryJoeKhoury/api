@@ -33,23 +33,58 @@ const accordionInfo = [
 const cardInfo = [
   { id: "1", image: "/images/coding.webp", title: "coding", type: "tech" },
   { id: "2", image: "/images/coding.webp", title: "coding", type: "tech" },
-  { id: "3", image: "/images/coding.webp", title: "music", type: "music" },
-  { id: "4", image: "/images/coding.webp", title: "art", type: "art" },
-  { id: "5", image: "/images/coding.webp", title: "sport", type: "sport" },
-  { id: "6", image: "/images/coding.webp", title: "sport", type: "sport" },
+  { id: "3", image: "/images/music-hero.jpg", title: "music", type: "music" },
+  { id: "4", image: "/images/art.jpg", title: "art", type: "art" },
+  {
+    id: "5",
+    image: "/images/different_sports.jpg",
+    title: "sport",
+    type: "sport",
+  },
+  {
+    id: "6",
+    image: "/images/different_sports.jpg",
+    title: "sport",
+    type: "sport",
+  },
   { id: "7", image: "/images/coding.webp", title: "coding", type: "tech" },
   { id: "8", image: "/images/coding.webp", title: "coding", type: "tech" },
-  { id: "9", image: "/images/coding.webp", title: "music", type: "music" },
-  { id: "10", image: "/images/coding.webp", title: "art", type: "art" },
-  { id: "11", image: "/images/coding.webp", title: "sport", type: "sport" },
-  { id: "12", image: "/images/coding.webp", title: "sport", type: "sport" },
-  { id: "13", image: "/images/coding.webp", title: "sport", type: "sport" },
+  { id: "9", image: "/images/music-hero.jpg", title: "music", type: "music" },
+  { id: "10", image: "/images/art.jpg", title: "art", type: "art" },
+  {
+    id: "11",
+    image: "/images/different_sports.jpg",
+    title: "sport",
+    type: "sport",
+  },
+  {
+    id: "12",
+    image: "/images/different_sports.jpg",
+    title: "sport",
+    type: "sport",
+  },
+  {
+    id: "13",
+    image: "/images/different_sports.jpg",
+    title: "sport",
+    type: "sport",
+  },
   { id: "14", image: "/images/coding.webp", title: "coding", type: "tech" },
   { id: "15", image: "/images/coding.webp", title: "coding", type: "tech" },
-  { id: "16", image: "/images/coding.webp", title: "music", type: "music" },
-  { id: "17", image: "/images/coding.webp", title: "art", type: "art" },
-  { id: "18", image: "/images/coding.webp", title: "sport", type: "sport" },
-  { id: "19", image: "/images/coding.webp", title: "sport", type: "sport" },
+  { id: "16", image: "/images/music-hero.jpg", title: "music", type: "music" },
+  { id: "17", image: "/images/art.jpg", title: "art", type: "art" },
+  {
+    id: "18",
+    image: "/images/different_sports.jpg",
+    title: "sport",
+    type: "sport",
+  },
+  {
+    id: "19",
+    image: "/images/different_sports.jpg",
+    title: "sport",
+    type: "sport",
+  },
 ];
 
 export default function Team({ metas, links }) {
@@ -100,11 +135,11 @@ export default function Team({ metas, links }) {
         <h1 className="text-white text-4xl text-center mt-16 mb-8">
           Categories
         </h1>
-        <div className="text-white flex flex-row text-2xl md:justify-between my-8 flex-wrap gap-8 ">
+        <div className="text-white flex flex-row text-2xl md:justify-between justify-center my-8 flex-wrap gap-8 ">
           <button
             className={`${
               selectedType === "all"
-                ? "cursor-pointer border-b-4 border-solid border-white px-8 ease-in-out duration-150"
+                ? "cursor-pointer border-b-4 border-solid border-white px-4 ease-in-out duration-150"
                 : "cursor-pointer  text-gray-400 border-b-4 border-solid border-gray-400 ease-in-out duration-150"
             }`}
             value="all"
@@ -116,7 +151,7 @@ export default function Team({ metas, links }) {
           <button
             className={`${
               selectedType === "tech"
-                ? "cursor-pointer border-b-4 border-solid border-white px-8 ease-in-out duration-150"
+                ? "cursor-pointer border-b-4 border-solid border-white px-4 ease-in-out duration-150"
                 : "cursor-pointer  text-gray-400 border-b-4 border-solid border-gray-400 ease-in-out duration-150"
             }`}
             value="tech"
@@ -127,7 +162,7 @@ export default function Team({ metas, links }) {
           <button
             className={`${
               selectedType === "art"
-                ? "cursor-pointer border-b-4 border-solid border-white px-8 ease-in-out duration-150"
+                ? "cursor-pointer border-b-4 border-solid border-white px-4 ease-in-out duration-150"
                 : "cursor-pointer  text-gray-400 border-b-4 border-solid border-gray-400 ease-in-out duration-150"
             }`}
             value="art"
@@ -138,7 +173,7 @@ export default function Team({ metas, links }) {
           <button
             className={`${
               selectedType === "sport"
-                ? "cursor-pointer border-b-4 border-solid border-white px-8 ease-in-out duration-150"
+                ? "cursor-pointer border-b-4 border-solid border-white px-4 ease-in-out duration-150"
                 : "cursor-pointer  text-gray-400 border-b-4 border-solid border-gray-400 ease-in-out duration-150"
             }`}
             value="sport"
@@ -149,7 +184,7 @@ export default function Team({ metas, links }) {
           <button
             className={`${
               selectedType === "music"
-                ? "cursor-pointer border-b-4 border-solid border-white px-8 ease-in-out duration-150"
+                ? "cursor-pointer border-b-4 border-solid border-white px-4 ease-in-out duration-150"
                 : "cursor-pointer  text-gray-400 border-b-4 border-solid border-gray-400 ease-in-out duration-150"
             }`}
             value="music"
@@ -165,6 +200,8 @@ export default function Team({ metas, links }) {
               image={info.image}
               title={info.title}
               margin="m-auto"
+              padding="md:p-8 p-0"
+              size="xl:w-[512px] xl:h-[300px] sm:w-[384px] sm:h-[200px] md:h-[195px] md:w-[295px] lg:w-[385px] lg:h-[295px] w-full"
             />
           ))}
         </CardContainer>
