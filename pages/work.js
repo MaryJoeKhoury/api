@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import AlignContainer from "@/components/AlignContainer";
 import axios from "@/utils/axios";
 import Modal from "@/components/Modal";
+import { Fullscreen } from "lucide-react";
 
 export default function Work({ metas, links }) {
   const [showModal, setShowModal] = useState(false);
@@ -14,7 +15,7 @@ export default function Work({ metas, links }) {
       {/* <h1 className="text-white md:text-5xl text-3xl text-center my-28">
           COMING SOON...
         </h1> */}
-      <div className="relative">
+      <div className="relative mb-8">
         <img src="/images/cam.webp" className="opacity-80 w-full h-full" />
         <button
           type="button"
@@ -26,16 +27,29 @@ export default function Work({ metas, links }) {
         {showModal && <Modal onClose={() => setShowModal(false)} />}
       </div>
 
-      {/* <AlignContainer>
-        <div className="bg-white">
-          <iframe
-            src="https://www.youtube.com/embed/c8C04rOeFvI&list"
-            frameborder="0"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
+      <AlignContainer>
+        {/* <div className="bg-white m-auto w-fit"> */}
+        <iframe
+          src="https://www.youtube.com/embed/RHqbNanuuH9ApOhk"
+          width={500}
+          frameborder="0"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+        <div className="mt-8">
+          <video width="full" height="full" controls preload="none">
+            <source src="/videos/video.mp4" type="video/mp4" />
+            <track
+              src="/path/to/captions.vtt"
+              kind="subtitles"
+              srcLang="en"
+              label="English"
+            />
+            Your browser does not support the video tag.
+          </video>
         </div>
-      </AlignContainer> */}
+        {/* </div> */}
+      </AlignContainer>
       <Footer
         linkedin={links.data.social_media.en.Linkedin}
         instagram={links.data.social_media.en.Instagram}
