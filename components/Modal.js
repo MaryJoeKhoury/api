@@ -15,7 +15,7 @@ const Modal = ({ onClose }) => {
       className="text-black fixed inset-0 bg-black backdrop-blur-sm bg-opacity-30  flex justify-center items-center z-10"
     >
       <AlignContainer>
-        <div className="mt-10 flex flex-col  ">
+        <div className=" flex flex-col  ">
           <div className="bg-white sm:px-0 sm:py-5 px-10 py-5 rounded-xl flex flex-col items-center gap-4 w-fit relative">
             <button className="absolute top-4 right-4 " onClick={onClose}>
               <X color="black" />
