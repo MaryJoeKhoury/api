@@ -10,4 +10,7 @@ body {
   .mySwiper .swiper-button-prev {
     @apply text-[#fe424c];
   }
+  .ytp-cued-thumbnail-overlay-image {
+    @apply bg-white;
+  }
 }
