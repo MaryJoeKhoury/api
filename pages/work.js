@@ -28,7 +28,6 @@ export default function Work({ metas, links }) {
       </div>
 
       <AlignContainer>
-        {/* <div className="bg-white m-auto w-fit"> */}
         <div className="text-white mb-8">
           <h1 className="text-white md:text-5xl text-center my-8 text-3xl  ">
             Here is a{" "}
@@ -68,7 +67,6 @@ export default function Work({ metas, links }) {
             Your browser does not support the video tag.
           </video>
         </div>
-        {/* </div> */}
       </AlignContainer>
       <Footer
         linkedin={links.data.social_media.en.Linkedin}
