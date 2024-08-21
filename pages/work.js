@@ -29,15 +29,35 @@ export default function Work({ metas, links }) {
 
       <AlignContainer>
         {/* <div className="bg-white m-auto w-fit"> */}
-        <iframe
-          src="https://www.youtube.com/embed/RHqbNanuuH9ApOhk"
-          width={500}
-          frameborder="0"
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
+        <div className="text-white mb-8">
+          <h1 className="text-white md:text-5xl text-center my-8 text-3xl  ">
+            Here is a{" "}
+            <span className="text-[#fe424c] underline underline-offset-4 decoration-wavy">
+              GREAT
+            </span>{" "}
+            cinematography video!
+          </h1>
+          <iframe
+            width="100%"
+            height="550"
+            // color="white"
+            src="https://www.youtube.com/embed/mUvRS6OU6HU"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
         <div className="mt-8">
-          <video width="full" height="full" controls preload="none">
+          <video
+            width="full"
+            height="full"
+            autoPlay
+            controls
+            loop
+            preload="auto"
+          >
             <source src="/videos/video.mp4" type="video/mp4" />
             <track
               src="/path/to/captions.vtt"
