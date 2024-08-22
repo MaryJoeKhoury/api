@@ -2,8 +2,10 @@ import React from "react";
 import { Quote } from "lucide-react";
 import { ChevronRight } from "lucide-react";
 import { ChevronLeft } from "lucide-react";
+import { useSwiper } from "swiper/react";
 
 const Testemonial = (props) => {
+  const swiper = useSwiper();
   return (
     <>
       <div className=" flex md:flex-row flex-col  justify-center  ">
@@ -27,16 +29,18 @@ const Testemonial = (props) => {
                 className="bg-[#fe424c] rounded-full "
                 width={40}
                 height={40}
+                onClick={() => swiper.slidePrev()}
               />
               <ChevronRight
                 className="bg-[#fe424c] rounded-full "
                 width={40}
                 height={40}
+                onClick={() => swiper.slideNext()}
               />
             </div>
           </div>
           <div className=" md:text-left text-center mt-20">
-            <p className="px-6 md:px-0 md:pr-14 font-semibold text-xl relative">
+            <p className="px-6 md:px-0 md:pr-14 font-semibold text-xl relative ">
               <Quote
                 className="absolute left-3 md:-left-8 rotate-180 top-0 fill-[#fe424c]"
                 color="#fe424c"
@@ -64,11 +68,13 @@ const Testemonial = (props) => {
               className="bg-[#fe424c] rounded-full "
               width={40}
               height={40}
+              onClick={() => swiper.slidePrev()}
             />
             <ChevronRight
               className="bg-[#fe424c] rounded-full "
               width={40}
               height={40}
+              onClick={() => swiper.slideNext()}
             />
           </div>
         </div>

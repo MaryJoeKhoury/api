@@ -34,7 +34,7 @@ const cardInfo = [
   { id: "1", image: "/images/coding.webp", title: "coding", type: "tech" },
   { id: "2", image: "/images/coding.webp", title: "coding", type: "tech" },
   { id: "3", image: "/images/music-hero.jpg", title: "music", type: "music" },
-  { id: "4", image: "/images/art.jpg", title: "art", type: "art" },
+  { id: "4", image: "/images/starry-night.jpg", title: "art", type: "art" },
   {
     id: "5",
     image: "/images/different_sports.jpg",

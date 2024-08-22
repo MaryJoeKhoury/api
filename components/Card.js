@@ -9,7 +9,7 @@ export const Card = (props) => {
       >
         {/* <div className="xl:w-[512px] xl:h-[300px] sm:w-[384px] sm:h-[200px] md:h-[195px] md:w-[295px] lg:w-[385px] lg:h-[295px]"> */}
         <div className={` ${props.size}`}>
-          <img src={props.image} className="w-full h-full" />
+          <img src={props.image} className="w-full h-full object-cover" />
         </div>
 
         <h1 className={` my-2  text-2xl font-bold ${props.margin}`}>
