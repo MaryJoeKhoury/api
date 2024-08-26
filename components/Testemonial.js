@@ -8,15 +8,15 @@ const Testemonial = (props) => {
   const swiper = useSwiper();
   return (
     <>
-      <div className=" flex md:flex-row flex-col  items-center justify-center bg-black h-[200%] ">
-        <div className="md:w-3/5">
-          <h3 className="text-2xl text-[#fe424c] md:text-left text-center">
+      <div className=" flex md:flex-row flex-col  items-center justify-center bg-black  lg:relative ">
+        <div className="md:w-3/5 ">
+          <h3 className="text-2xl text-[#fe424c] md:text-left text-center lg:absolute lg:top-0  ">
             Testemonials
           </h3>
-          <h1 className="md:text-5xl text-3xl font-bold my-6 md:text-left text-center">
+          <h1 className="md:text-5xl text-3xl font-bold my-6 md:text-left text-center lg:absolute xl:top-4 lg:top-8">
             Our Clients <span className="text-[#fe424c]">Love Us.</span>
           </h1>
-          <p className="text-slate-300 text-lg md:pr-12 md:text-left text-center md:px-0 px-5">
+          <p className="text-slate-300 text-lg md:pr-12 md:text-left text-center md:px-0 px-5 lg:absolute xl:top-28 lg:top-32 lg:right-2/4">
             Here are what some of our amazing clients are saying about their
             experience with our team. Here are what some of our amazing clients
             are saying about their experience with our team.
@@ -39,7 +39,7 @@ const Testemonial = (props) => {
               />
             </div>
           </div>
-          <div className=" md:text-left text-center mt-20">
+          <div className=" md:text-left text-center mt-20 lg:mt-64">
             <p className="px-6 md:px-0 md:pr-14 font-semibold text-xl  before:content-['\275D'] before:text-[#fe424c] md:before:text-5xl  before:text-3xl before:mt-9 before:h-fit  after:content-['\275E'] after:text-[#fe424c] md:after:text-5xl before:align-middle after:align-middle  after:text-3xl ">
               {/* <Quote
                 className="absolute left-3 md:-left-2 md:w-8 rotate-180 top-1.5 fill-[#fe424c]"
