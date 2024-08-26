@@ -6,7 +6,8 @@ import Testemonial from "@/components/Testemonial";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import "swiper/css/effect-fade";
+import { EffectFade, Navigation, Pagination } from "swiper/modules";
 
 const testemonialInfo = [
   {
@@ -73,8 +74,10 @@ export default function Client({ metas, links }) {
           <Swiper
             loop={true}
             navigation={false}
-            modules={[Navigation]}
-            className="mySwiper"
+            effect={"fade"}
+            modules={[EffectFade, Navigation]}
+            fadeEffect={{ crossFade: true }}
+            className="mySwiper "
             breakpoints={{
               320: {
                 slidesPerView: 1,
@@ -135,9 +138,7 @@ export async function getStaticProps({ locale }) {
 
   await axios
     .get("/settings", {
-      headers: {
-        "Accept-Language": locale,
-      },
+      headers: { "Accept-Language": locale },
     })
     .then((res) => {
       links = res.data;

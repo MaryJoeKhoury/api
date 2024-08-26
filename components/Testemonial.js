@@ -8,7 +8,7 @@ const Testemonial = (props) => {
   const swiper = useSwiper();
   return (
     <>
-      <div className=" flex md:flex-row flex-col  justify-center  ">
+      <div className=" flex md:flex-row flex-col  items-center justify-center bg-black h-[200%] ">
         <div className="md:w-3/5">
           <h3 className="text-2xl text-[#fe424c] md:text-left text-center">
             Testemonials
@@ -40,16 +40,19 @@ const Testemonial = (props) => {
             </div>
           </div>
           <div className=" md:text-left text-center mt-20">
-            <p className="px-6 md:px-0 md:pr-14 font-semibold text-xl relative ">
-              <Quote
-                className="absolute left-3 md:-left-8 rotate-180 top-0 fill-[#fe424c]"
+            <p className="px-6 md:px-0 md:pr-14 font-semibold text-xl  before:content-['\275D'] before:text-[#fe424c] md:before:text-5xl  before:text-3xl before:mt-9 before:h-fit  after:content-['\275E'] after:text-[#fe424c] md:after:text-5xl before:align-middle after:align-middle  after:text-3xl ">
+              {/* <Quote
+                className="absolute left-3 md:-left-2 md:w-8 rotate-180 top-1.5 fill-[#fe424c]"
                 color="#fe424c"
-              />
+                size={16}
+              /> */}
+              {/* &nbsp; &nbsp; */}
               {props.review}
-              <Quote
-                className="absolute bottom-0 right-4 fill-[#fe424c]"
+              {/* <Quote
+                className="absolute bottom-1.5 right-[19rem] fill-[#fe424c]"
                 color="#fe424c"
-              />
+                size={16}
+              /> */}
             </p>
 
             <div className="flex flex-row gap-4 items-center  md:justify-start justify-center mt-6">
@@ -61,8 +64,8 @@ const Testemonial = (props) => {
             </div>
           </div>
         </div>
-        <div className="md:w-2/5 md:block hidden relative  ">
-          <img src={props.image} className="w-fit rounded-md relative" />
+        <div className="md:w-2/5 md:block hidden relative h-fit  ">
+          <img src={props.image} className="w-fit rounded-md " />
           <div className="bg-white flex flex-row justify-end gap-4 w-fit ml-auto absolute right-0 bottom-0 px-12 py-6 rounded-tl-[30px]">
             <ChevronLeft
               className="bg-[#fe424c] rounded-full "
