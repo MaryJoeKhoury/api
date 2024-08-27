@@ -40,7 +40,7 @@ const Testemonial = (props) => {
             </div>
           </div>
           <div className=" md:text-left text-center mt-20 lg:mt-64">
-            <p className="px-6 md:px-0 md:pr-14 font-semibold text-xl  before:content-['\275D'] before:text-[#fe424c] md:before:text-5xl  before:text-3xl before:mt-9 before:h-fit  after:content-['\275E'] after:text-[#fe424c] md:after:text-5xl before:align-middle after:align-middle  after:text-3xl ">
+            <p className="px-6 md:px-0 md:pr-14 font-semibold text-xl  before:content-['\275D'] before:text-[#fe424c] md:before:text-5xl  before:text-3xl before:mt-9 before:h-fit  after:content-['\275E'] after:text-[#fe424c] md:after:text-5xl before:align-middle after:align-middle  after:text-3xl before:mr-2 after:ml-2">
               {/* <Quote
                 className="absolute left-3 md:-left-2 md:w-8 rotate-180 top-1.5 fill-[#fe424c]"
                 color="#fe424c"
@@ -68,13 +68,13 @@ const Testemonial = (props) => {
           <img src={props.image} className="w-fit rounded-md " />
           <div className="bg-white flex flex-row justify-end gap-4 w-fit ml-auto absolute right-0 bottom-0 px-12 py-6 rounded-tl-[30px]">
             <ChevronLeft
-              className="bg-[#fe424c] rounded-full "
+              className="hover:bg-[#fe424c] rounded-full cursor-pointer bg-[#ffbdc0]"
               width={40}
               height={40}
               onClick={() => swiper.slidePrev()}
             />
             <ChevronRight
-              className="bg-[#fe424c] rounded-full "
+              className="hover:bg-[#fe424c] rounded-full cursor-pointer bg-[#ffbdc0]"
               width={40}
               height={40}
               onClick={() => swiper.slideNext()}
