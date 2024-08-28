@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Footer = (props) => {
   return (
-    <div className="bg-[#fe424c] text-white py-12 mt-12">
+    <div className="bg-[#fe424c] text-white py-12 mt-12 font-Poppins">
       <AlignContainer>
         <div className="flex flex-row justify-between flex-wrap ">
           <div className="sm:w-1/5 w-1/2">

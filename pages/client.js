@@ -58,63 +58,53 @@ export default function Client({ metas, links }) {
   return (
     <>
       <NavBar image={metas.data.seo_image} />
-      <AlignContainer>
-        <div className="text-white">
-          {/* <h3 className="text-2xl text-[#fe424c] md:text-left text-center">
-            Testemonials
-          </h3>
-          <h1 className="md:text-5xl text-3xl font-bold my-6 md:text-left text-center">
-            Our Clients <span className="text-[#fe424c]">Love Us.</span>
-          </h1>
-          <p className="text-slate-300 text-lg md:pr-12 md:text-left text-center md:px-0 px-5">
-            Here are what some of our amazing clients are saying about their
-            experience with our team. Here are what some of our amazing clients
-            are saying about their experience with our team.
-          </p> */}
-          <Swiper
-            loop={true}
-            navigation={false}
-            effect={"fade"}
-            modules={[EffectFade, Navigation]}
-            fadeEffect={{ crossFade: true }}
-            className="mySwiper "
-            breakpoints={{
-              320: {
-                slidesPerView: 1,
-              },
-              480: {
-                slidesPerView: 1,
-              },
-              640: {
-                slidesPerView: 1,
-              },
-              768: {
-                slidesPerView: 1,
-              },
-              1024: {
-                slidesPerView: 1,
-              },
-              1280: {
-                slidesPerView: 1,
-              },
-            }}
-          >
-            {testemonialInfo.map((info) => (
-              <SwiperSlide>
-                <Testemonial
-                  key={info.id}
-                  review={info.review}
-                  reviewer={info.reviewer}
-                  name={info.name}
-                  profession={info.profession}
-                  image={info.image}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </AlignContainer>
-
+      <main className=" font-Poppins">
+        <AlignContainer>
+          <div className="text-white">
+            <Swiper
+              loop={true}
+              navigation={false}
+              effect={"fade"}
+              modules={[EffectFade, Navigation]}
+              fadeEffect={{ crossFade: true }}
+              className="mySwiper "
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                },
+                480: {
+                  slidesPerView: 1,
+                },
+                640: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 1,
+                },
+                1024: {
+                  slidesPerView: 1,
+                },
+                1280: {
+                  slidesPerView: 1,
+                },
+              }}
+            >
+              {testemonialInfo.map((info) => (
+                <SwiperSlide>
+                  <Testemonial
+                    key={info.id}
+                    review={info.review}
+                    reviewer={info.reviewer}
+                    name={info.name}
+                    profession={info.profession}
+                    image={info.image}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </AlignContainer>
+      </main>
       <Footer
         linkedin={links.data.social_media.en.Linkedin}
         instagram={links.data.social_media.en.Instagram}

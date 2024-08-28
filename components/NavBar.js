@@ -20,7 +20,7 @@ const NavBar = (props) => {
         {/* {metas.data.map((item) => { */}
         {/* return ( */}
         <AlignContainer>
-          <div className=" hidden md:flex flex-row justify-between py-8 items-center">
+          <div className=" hidden md:flex flex-row justify-between py-8 items-center font-Poppins">
             {/* <div className="bg-white"> */}
             <Link href="/">
               <img src={props.image} className="bg-white w-48" />
@@ -92,63 +92,65 @@ const NavBar = (props) => {
           </div>
         </AlignContainer>
       </div>
-      <div
-        className={`fixed right-0 top-0 flex h-screen w-full transform flex-col items-cente gap-20 bg-black text-center text-2xl md:hidden ${
-          menuActive ? "translate-x-0" : "translate-x-full"
-        } z-10 transition-transform duration-300 ease-in-out`}
-      >
-        <li className="ml-auto mr-7 pt-10 list-none">
-          <Close onClick={handleMobileMenu} />
-          {/* <img src="/icons/close.svg " className="ml-auto w-8 py-10" /> */}
-        </li>
-        <ul className="space-y-10">
-          <li>
-            <Link href="/about" className="font-bold text-white">
-              about us
-            </Link>
+      <AlignContainer>
+        <div
+          className={`fixed right-0 top-0 flex h-screen w-full transform flex-col items-cente gap-20 bg-black text-center text-2xl md:hidden ${
+            menuActive ? "translate-x-0" : "translate-x-full"
+          } z-10 transition-transform duration-300 ease-in-out font-Poppins`}
+        >
+          <li className="ml-auto mr-7 pt-10 list-none">
+            <Close onClick={handleMobileMenu} />
+            {/* <img src="/icons/close.svg " className="ml-auto w-8 py-10" /> */}
           </li>
-          <li>
-            <Link href="/work" className="font-bold text-white">
-              our work
-            </Link>
-          </li>
-          <li>
-            <Link href="/client" className="font-bold text-white">
-              our clients
-            </Link>
-          </li>
-          <li>
-            <Link href="/team" className="font-bold text-white">
-              our team
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="font-bold text-white">
-              contact-us
-            </Link>
+          <ul className="space-y-10">
+            <li>
+              <Link href="/about" className="font-bold text-white">
+                about us
+              </Link>
+            </li>
+            <li>
+              <Link href="/work" className="font-bold text-white">
+                our work
+              </Link>
+            </li>
+            <li>
+              <Link href="/client" className="font-bold text-white">
+                our clients
+              </Link>
+            </li>
+            <li>
+              <Link href="/team" className="font-bold text-white">
+                our team
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="font-bold text-white">
+                contact-us
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <ul className="flex w-full items-center justify-center  px-2 py-8 align-middle md:hidden font-Poppins">
+          {/* <div className="border-2 border-white border-solid w-12 h-12 rounded-full p-8 flex items-center justify-center"> */}
+          <Link href="/">
+            <img src={props.image} className="bg-white w-40" />
+          </Link>
+          {/* </div> */}
+          <li className="mr-4 last:ml-auto">
+            <button className="md:hidden">
+              <div
+                className={`relative cursor-pointer ${
+                  menuActive ? "active" : ""
+                }`}
+                id="ham-menu"
+                onClick={handleMobileMenu}
+              >
+                <Navigation />
+              </div>
+            </button>
           </li>
         </ul>
-      </div>
-      <ul className="flex w-full items-center justify-center  px-2 py-8 align-middle md:hidden">
-        {/* <div className="border-2 border-white border-solid w-12 h-12 rounded-full p-8 flex items-center justify-center"> */}
-        <Link href="/">
-          <img src={props.image} className="bg-white w-40" />
-        </Link>
-        {/* </div> */}
-        <li className="mr-4 last:ml-auto">
-          <button className="md:hidden">
-            <div
-              className={`relative cursor-pointer ${
-                menuActive ? "active" : ""
-              }`}
-              id="ham-menu"
-              onClick={handleMobileMenu}
-            >
-              <Navigation />
-            </div>
-          </button>
-        </li>
-      </ul>
+      </AlignContainer>
     </>
   );
 };

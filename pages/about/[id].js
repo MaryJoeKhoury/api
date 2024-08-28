@@ -60,62 +60,64 @@ export default function Page() {
   return (
     <>
       <NavBar image={metas?.seo_image} />
-
-      <AlignContainer>
-        <div className="text-white flex flex-col items-center justify-center gap-10 flex-wrap max-w-4xl m-auto">
-          <img src={project.image} className="rounded-3xl" />
-          <h1 className="text-xl">{project.title}</h1>
-          <div className="flex md:flex-row md:justify-between font-semibold px-8 flex-col gap-4 ">
-            {project.text && (
-              <div className="md:text-2xl text-lg md:w-1/2">{project.text}</div>
-            )}
-            <div className="flex flex-col gap-2 ">
-              {project.client && (
-                <div className="md:text-2xl text-lg">
-                  CLIENT: {project.client}
+      <main className=" font-Poppins">
+        <AlignContainer>
+          <div className="text-white flex flex-col items-center justify-center gap-10 flex-wrap max-w-4xl m-auto">
+            <img src={project.image} className="rounded-3xl" />
+            <h1 className="text-xl">{project.title}</h1>
+            <div className="flex md:flex-row md:justify-between font-semibold px-8 flex-col gap-4 ">
+              {project.text && (
+                <div className="md:text-2xl text-lg md:w-1/2">
+                  {project.text}
                 </div>
               )}
-              {project.directors && (
-                <div className="md:text-2xl text-lg">
-                  DIRECTOR(S): {project.directors}
-                </div>
-              )}
-              {project.cinematographer && (
-                <div className="md:text-2xl text-lg">
-                  DP: {project.cinematographer}
-                </div>
-              )}
-              {project.agency && (
-                <div className="md:text-2xl text-lg">
-                  AGENCY: {project.agency}
-                </div>
-              )}
+              <div className="flex flex-col gap-2 ">
+                {project.client && (
+                  <div className="md:text-2xl text-lg">
+                    CLIENT: {project.client}
+                  </div>
+                )}
+                {project.directors && (
+                  <div className="md:text-2xl text-lg">
+                    DIRECTOR(S): {project.directors}
+                  </div>
+                )}
+                {project.cinematographer && (
+                  <div className="md:text-2xl text-lg">
+                    DP: {project.cinematographer}
+                  </div>
+                )}
+                {project.agency && (
+                  <div className="md:text-2xl text-lg">
+                    AGENCY: {project.agency}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="text-white flex flex-row gap-4 items-center mt-8 md:justify-end justify-center font-semibold text-lg">
-          {prevId && (
-            <>
-              <Link href={`/about/${prevId}`} className="hover:underline">
-                Previous
-              </Link>
-              <span className="h-4 border-solid border-[2px] border-white rounded-lg"></span>
-            </>
-          )}
+          <div className="text-white flex flex-row gap-4 items-center mt-8 md:justify-end justify-center font-semibold text-lg">
+            {prevId && (
+              <>
+                <Link href={`/about/${prevId}`} className="hover:underline">
+                  Previous
+                </Link>
+                <span className="h-4 border-solid border-[2px] border-white rounded-lg"></span>
+              </>
+            )}
 
-          <p className="text-gray-500">Our Work</p>
+            <p className="text-gray-500">Our Work</p>
 
-          {nextId && (
-            <>
-              <span className="h-4 border-solid border-[2px] border-white rounded-lg"></span>
-              <Link href={`/about/${nextId}`} className="hover:underline">
-                Next
-              </Link>
-            </>
-          )}
-        </div>
-      </AlignContainer>
-
+            {nextId && (
+              <>
+                <span className="h-4 border-solid border-[2px] border-white rounded-lg"></span>
+                <Link href={`/about/${nextId}`} className="hover:underline">
+                  Next
+                </Link>
+              </>
+            )}
+          </div>
+        </AlignContainer>
+      </main>
       <Footer
         linkedin={links?.social_media.en.Linkedin}
         instagram={links?.social_media.en.Instagram}

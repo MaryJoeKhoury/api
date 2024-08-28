@@ -45,7 +45,8 @@ export default function Home({ metas, data, links }) {
               description={parse(info.details.text)}
               date={info.details.cta_text}
               link={info.details.cta_link}
-              padding="md:p-8 p-0"
+              padding="py-8 "
+              width="md:w-[45%]"
             />
           );
         })}

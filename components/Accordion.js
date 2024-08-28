@@ -7,7 +7,7 @@ const Accordion = (props) => {
   return (
     <AlignContainer>
       <div
-        className={`overflow-hidden text-white border-b-2 border-solid border-white duration-200`}
+        className={`overflow-hidden text-white border-b-2 border-solid border-white duration-20 `}
       >
         <button
           onClick={props.onClick}

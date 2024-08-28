@@ -119,80 +119,81 @@ export default function Team({ metas, links }) {
     // setDisplayedData(filteredType.slice(0, visibleItemCount + 5));
   };
   return (
-    <div className="">
+    <>
       <NavBar image={metas.data.seo_image} />
+      <main className=" font-Poppins">
+        {accordionInfo.map((info) => (
+          <Accordion
+            key={info.id}
+            title={info.title}
+            details={info.details}
+            isOpen={activeIndex === info.id}
+            onClick={() => handleItemClick(info.id)}
+          />
+        ))}
+        <AlignContainer>
+          <h1 className="text-white text-4xl text-center mt-16 mb-8">
+            Categories
+          </h1>
+          <div className="text-white flex flex-row text-2xl md:justify-between justify-center my-8 flex-wrap gap-8 ">
+            <button
+              className={`${
+                selectedType === "all"
+                  ? "cursor-pointer border-b-4 border-solid border-white px-4 ease-in-out duration-150"
+                  : "cursor-pointer  text-gray-400 border-b-4 border-solid border-gray-400 ease-in-out duration-150"
+              }`}
+              value="all"
+              onClick={handleType}
+            >
+              All Categories
+            </button>
 
-      {accordionInfo.map((info) => (
-        <Accordion
-          key={info.id}
-          title={info.title}
-          details={info.details}
-          isOpen={activeIndex === info.id}
-          onClick={() => handleItemClick(info.id)}
-        />
-      ))}
-      <AlignContainer>
-        <h1 className="text-white text-4xl text-center mt-16 mb-8">
-          Categories
-        </h1>
-        <div className="text-white flex flex-row text-2xl md:justify-between justify-center my-8 flex-wrap gap-8 ">
-          <button
-            className={`${
-              selectedType === "all"
-                ? "cursor-pointer border-b-4 border-solid border-white px-4 ease-in-out duration-150"
-                : "cursor-pointer  text-gray-400 border-b-4 border-solid border-gray-400 ease-in-out duration-150"
-            }`}
-            value="all"
-            onClick={handleType}
-          >
-            All Categories
-          </button>
-
-          <button
-            className={`${
-              selectedType === "tech"
-                ? "cursor-pointer border-b-4 border-solid border-white px-4 ease-in-out duration-150"
-                : "cursor-pointer  text-gray-400 border-b-4 border-solid border-gray-400 ease-in-out duration-150"
-            }`}
-            value="tech"
-            onClick={handleType}
-          >
-            Tech
-          </button>
-          <button
-            className={`${
-              selectedType === "art"
-                ? "cursor-pointer border-b-4 border-solid border-white px-4 ease-in-out duration-150"
-                : "cursor-pointer  text-gray-400 border-b-4 border-solid border-gray-400 ease-in-out duration-150"
-            }`}
-            value="art"
-            onClick={handleType}
-          >
-            Art
-          </button>
-          <button
-            className={`${
-              selectedType === "sport"
-                ? "cursor-pointer border-b-4 border-solid border-white px-4 ease-in-out duration-150"
-                : "cursor-pointer  text-gray-400 border-b-4 border-solid border-gray-400 ease-in-out duration-150"
-            }`}
-            value="sport"
-            onClick={handleType}
-          >
-            Sport
-          </button>
-          <button
-            className={`${
-              selectedType === "music"
-                ? "cursor-pointer border-b-4 border-solid border-white px-4 ease-in-out duration-150"
-                : "cursor-pointer  text-gray-400 border-b-4 border-solid border-gray-400 ease-in-out duration-150"
-            }`}
-            value="music"
-            onClick={handleType}
-          >
-            Music
-          </button>
-        </div>
+            <button
+              className={`${
+                selectedType === "tech"
+                  ? "cursor-pointer border-b-4 border-solid border-white px-4 ease-in-out duration-150"
+                  : "cursor-pointer  text-gray-400 border-b-4 border-solid border-gray-400 ease-in-out duration-150"
+              }`}
+              value="tech"
+              onClick={handleType}
+            >
+              Tech
+            </button>
+            <button
+              className={`${
+                selectedType === "art"
+                  ? "cursor-pointer border-b-4 border-solid border-white px-4 ease-in-out duration-150"
+                  : "cursor-pointer  text-gray-400 border-b-4 border-solid border-gray-400 ease-in-out duration-150"
+              }`}
+              value="art"
+              onClick={handleType}
+            >
+              Art
+            </button>
+            <button
+              className={`${
+                selectedType === "sport"
+                  ? "cursor-pointer border-b-4 border-solid border-white px-4 ease-in-out duration-150"
+                  : "cursor-pointer  text-gray-400 border-b-4 border-solid border-gray-400 ease-in-out duration-150"
+              }`}
+              value="sport"
+              onClick={handleType}
+            >
+              Sport
+            </button>
+            <button
+              className={`${
+                selectedType === "music"
+                  ? "cursor-pointer border-b-4 border-solid border-white px-4 ease-in-out duration-150"
+                  : "cursor-pointer  text-gray-400 border-b-4 border-solid border-gray-400 ease-in-out duration-150 "
+              }`}
+              value="music"
+              onClick={handleType}
+            >
+              Music
+            </button>
+          </div>
+        </AlignContainer>
         <CardContainer>
           {filteredType.slice(0, visibleItemCount).map((info) => (
             <Card
@@ -200,8 +201,8 @@ export default function Team({ metas, links }) {
               image={info.image}
               title={info.title}
               margin="m-auto"
-              padding="md:p-8 p-0"
-              size="xl:w-[512px] xl:h-[300px] sm:w-[384px] sm:h-[200px] md:h-[195px] md:w-[295px] lg:w-[385px] lg:h-[295px] w-full"
+              padding="md:mt-8 p-0"
+              size="xl:w-[570px] xl:h-[300px] sm:w-[500px] sm:h-[300px] md:h-[195px] md:w-[350px] lg:w-[450px] lg:h-[295px] xs:w-[350px] xs:h-[200px] w-full"
             />
           ))}
         </CardContainer>
@@ -215,23 +216,13 @@ export default function Team({ metas, links }) {
             </button>
           </div>
         )}
-        {visibleItemCount >= filteredType.length && filteredType.length > 6 && (
-          <div className="w-fit m-auto" onClick={handleViewMore}>
-            <button
-              type="button"
-              disabled
-              className="bg-[#fe424c] px-4 py-2 cursor-not-allowed rounded-md text-white bg-opacity-20 "
-            >
-              View More
-            </button>
-          </div>
-        )}
-      </AlignContainer>
+      </main>
+
       <Footer
         linkedin={links.data.social_media.en.Linkedin}
         instagram={links.data.social_media.en.Instagram}
       />
-    </div>
+    </>
   );
 }
 
