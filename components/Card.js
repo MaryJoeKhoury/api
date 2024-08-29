@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import { Fullscreen } from "lucide-react";
 
 export const Card = (props) => {
   return (
@@ -9,13 +11,18 @@ export const Card = (props) => {
       >
         {/* <div className="xl:w-[512px] xl:h-[300px] sm:w-[384px] sm:h-[200px] md:h-[195px] md:w-[295px] lg:w-[385px] lg:h-[295px]"> */}
         <div className={` ${props.size} overflow-hidden`}>
-          <img
+          <Image
             src={props.image}
-            className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 "
+            width={500}
+            height={500}
+            alt="Picture of the author"
+            style={{ objectFit: "cover", width: "100%", height: "100%" }}
+            // layout="fill"
+            className="  hover:scale-110 transition-transform duration-500 "
           />
         </div>
 
-        <h1 className={` my-2  text-2xl font-bold ${props.margin}`}>
+        <h1 className={` my-2  text-2xl  font-bold ${props.margin}`}>
           {props.title}
         </h1>
         <div className="text-xl font-semibold">{props.description}</div>

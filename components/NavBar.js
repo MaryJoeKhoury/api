@@ -5,6 +5,7 @@ import Navigation from "./svgs/Navigation";
 import Close from "./svgs/Close";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "./svgs/Logo";
 
 const NavBar = (props) => {
   // console.log(data);
@@ -23,7 +24,13 @@ const NavBar = (props) => {
           <div className=" hidden md:flex flex-row justify-between py-8 items-center font-Poppins">
             {/* <div className="bg-white"> */}
             <Link href="/">
-              <img src={props.image} className="bg-white w-48" />
+              {/* <img
+                src={props.image}
+                className=" w-48 logo ) {
+                
+              }"
+              /> */}
+              <Logo className="w-48" />
             </Link>
             {/* </div> */}
 
@@ -133,7 +140,8 @@ const NavBar = (props) => {
         <ul className="flex w-full items-center justify-center  px-2 py-8 align-middle md:hidden font-Poppins">
           {/* <div className="border-2 border-white border-solid w-12 h-12 rounded-full p-8 flex items-center justify-center"> */}
           <Link href="/">
-            <img src={props.image} className="bg-white w-40" />
+            {/* <img src={props.image} className="bg-white w-40" /> */}
+            <Logo className="w-48" />
           </Link>
           {/* </div> */}
           <li className="mr-4 last:ml-auto">

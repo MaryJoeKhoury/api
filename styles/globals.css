@@ -16,4 +16,7 @@ main {
   .ytp-cued-thumbnail-overlay-image {
     @apply bg-white;
   }
+  .logo svg {
+    @apply fill-white;
+  }
 }
