@@ -6,7 +6,19 @@ body {
   background-color: black;
 }
 main {
-  min-height: calc(100vh - 8.85rem - 23.75rem);
+  flex: 1;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#__next {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 @layer components {
   .mySwiper .swiper-button-next,
