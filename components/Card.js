@@ -17,7 +17,7 @@ export const Card = (props) => {
             width={1200}
             height={700}
             alt="Picture of the author"
-            style={{ objectFit: "cover", width: "100%", height: "100%" }}
+            style={{ objectFit: "cover", height: "100%" }}
             // layout="fill"
             className="  hover:scale-110 transition-transform duration-500 "
           />

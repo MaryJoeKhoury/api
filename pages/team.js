@@ -135,7 +135,7 @@ export default function Team({ metas, links }) {
           <h1 className="text-white text-4xl text-center mt-16 mb-8">
             Categories
           </h1>
-          <div className="text-white flex flex-row text-2xl md:justify-between justify-center my-8 flex-wrap gap-8 ">
+          <div className="text-white flex flex-row text-2xl sm:justify-between justify-normal my-8 flex-wrap gap-8 ">
             <button
               className={`${
                 selectedType === "all"
@@ -202,7 +202,7 @@ export default function Team({ metas, links }) {
               title={info.title}
               margin="m-auto"
               padding="md:mt-8 p-0"
-              size="xl:w-[570px] xl:h-[300px] sm:w-[500px] sm:h-[300px] md:h-[195px] md:w-[350px] lg:w-[450px] lg:h-[295px] xs:w-[350px] xs:h-[200px] w-full"
+              size="xl:w-[570px] xl:h-[300px] sm:w-full sm:h-[300px] md:h-[195px] md:w-[350px] lg:w-[450px] lg:h-[295px]  w-full h-[180px]"
             />
           ))}
         </CardContainer>
