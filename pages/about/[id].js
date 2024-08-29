@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar";
 import { useRouter } from "next/router";
 import AlignContainer from "@/components/AlignContainer";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Page() {
   const router = useRouter();
@@ -63,7 +64,14 @@ export default function Page() {
       <main className=" font-Poppins">
         <AlignContainer>
           <div className="text-white flex flex-col items-center justify-center gap-10 flex-wrap max-w-4xl m-auto">
-            <img src={project.image} className="rounded-3xl" />
+            {/* <img src={project.image} className="rounded-3xl" /> */}
+            <Image
+              src={project.image}
+              width={900}
+              height={500}
+              alt="image from the work"
+              className="rounded-lg"
+            />
             <h1 className="text-xl">{project.title}</h1>
             <div className="flex md:flex-row md:justify-between font-semibold px-8 flex-col gap-4 ">
               {project.text && (

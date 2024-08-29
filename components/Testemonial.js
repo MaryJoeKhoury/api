@@ -3,6 +3,7 @@ import { Quote } from "lucide-react";
 import { ChevronRight } from "lucide-react";
 import { ChevronLeft } from "lucide-react";
 import { useSwiper } from "swiper/react";
+import Image from "next/image";
 
 const Testemonial = (props) => {
   const swiper = useSwiper();
@@ -22,8 +23,13 @@ const Testemonial = (props) => {
             are saying about their experience with our team.
           </p>
           <div className="md:hidden rounded-3xl relative">
-            <img src={props.image} className="w-fit rounded-md mt-16 mb-12 " />
-
+            <Image
+              src={props.image}
+              width={1000}
+              height={10000}
+              alt="review image"
+              className="w-fit rounded-md mt-16 mb-12"
+            />
             <div className="bg-white flex flex-row justify-end gap-4 w-fit ml-auto absolute right-0 bottom-0 px-12 py-6 rounded-tl-[30px]">
               <ChevronLeft
                 className="bg-[#fe424c] rounded-full "
@@ -56,7 +62,13 @@ const Testemonial = (props) => {
             </p>
 
             <div className="flex flex-row gap-4 items-center  md:justify-start justify-center mt-6">
-              <img src={props.reviewer} className="w-16 h-16 rounded-full" />
+              <Image
+                src={props.reviewer}
+                width={1000}
+                height={1000}
+                alt="profile picture"
+                className="rounded-full w-16 h-16"
+              />
               <div>
                 <h1 className="text-[#fe424c] text-2xl w-fit ">{props.name}</h1>
                 <h3 className="w-fit text-sm">{props.profession}</h3>
@@ -65,7 +77,13 @@ const Testemonial = (props) => {
           </div>
         </div>
         <div className="md:w-2/5 md:block hidden relative h-fit  ">
-          <img src={props.image} className="w-fit rounded-md " />
+          <Image
+            src={props.image}
+            width={1000}
+            height={1000}
+            alt="review image"
+            className=" w-fit rounded-md"
+          />
           <div className="bg-white flex flex-row justify-end gap-4 w-fit ml-auto absolute right-0 bottom-0 px-12 py-6 rounded-tl-[30px]">
             <ChevronLeft
               className="hover:bg-[#fe424c] rounded-full cursor-pointer bg-[#ffbdc0] transition-all"

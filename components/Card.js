@@ -14,7 +14,7 @@ export const Card = (props) => {
           <Image
             src={props.image}
             width={500}
-            height={500}
+            height={0}
             alt="Picture of the author"
             style={{ objectFit: "cover", width: "100%", height: "100%" }}
             // layout="fill"

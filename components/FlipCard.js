@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const FlipCard = (props) => {
   const router = useRouter;
@@ -8,7 +9,16 @@ const FlipCard = (props) => {
     <div>
       <Link href={props.link}>
         <div className="relative group">
-          <img src={props.image} />
+          {/* <img src={props.image} /> */}
+          <div>
+            <Image
+              src={props.image}
+              width={500}
+              height={0}
+              alt="Picture of the author"
+              style={{ objectFit: "cover", width: "100%" }}
+            />
+          </div>
           <h1 className="text-white absolute m-auto left-0 right-0  top-0 bottom-0 w-fit h-fit  md:text-2xl text-lg  text-center ">
             {props.title}
           </h1>

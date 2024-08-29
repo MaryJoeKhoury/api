@@ -4,8 +4,7 @@ import Footer from "@/components/Footer";
 import AlignContainer from "@/components/AlignContainer";
 import axios from "@/utils/axios";
 import Modal from "@/components/Modal";
-import { Fullscreen } from "lucide-react";
-
+import Image from "next/image";
 export default function Work({ metas, links }) {
   const [showModal, setShowModal] = useState(false);
   return (
@@ -13,7 +12,15 @@ export default function Work({ metas, links }) {
       <NavBar image={metas.data.seo_image} />
       <main className=" font-Poppins">
         <div className="relative mb-8">
-          <img src="/images/cam.webp" className="opacity-80 w-full h-full" />
+          {/* <img src="/images/cam.webp" className="opacity-80 w-full h-full" /> */}
+          <Image
+            src="/images/cam.webp"
+            width={2000}
+            height={2000}
+            style={{ width: "100%", height: "100%" }}
+            alt="our work"
+            className="opacity-80 "
+          />
           <button
             type="button"
             onClick={() => setShowModal(true)}
