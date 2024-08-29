@@ -11,10 +11,11 @@ export const Card = (props) => {
       >
         {/* <div className="xl:w-[512px] xl:h-[300px] sm:w-[384px] sm:h-[200px] md:h-[195px] md:w-[295px] lg:w-[385px] lg:h-[295px]"> */}
         <div className={` ${props.size} overflow-hidden`}>
+          {/* <img src={props.image} /> */}
           <Image
             src={props.image}
-            width={500}
-            height={0}
+            width={1200}
+            height={700}
             alt="Picture of the author"
             style={{ objectFit: "cover", width: "100%", height: "100%" }}
             // layout="fill"
