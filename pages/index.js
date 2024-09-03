@@ -7,6 +7,7 @@ import NavBar from "@/components/NavBar";
 import parse from "html-react-parser";
 import { useEffect } from "react";
 import { animateBannerMessage, animateHomeCards } from "@/utils/animation";
+import CircleBg, { Circle } from "@/components/svgs/CircleBg";
 
 export default function Home({ metas, data, links }) {
   console.log(metas);
@@ -19,20 +20,29 @@ export default function Home({ metas, data, links }) {
       <NavBar image={metas.data.seo_image} />
       <main className=" font-Poppins">
         <AlignContainer>
-          <div className="text-white text-center md:text-7xl  md:px-8 mb-36 mt-16 text-5xl">
-            <h1 id="banner">
-              <span>
-                Here is a sneak-peak <br />
-                of our work.
-                <br /> And<span className="text-[#fe424c]"> the best</span> is
-                yet to come!
-                <br />
-                <br />
-              </span>
-              <span className=" text-[#00a3bb]" id="banner-span">
-                -Stay Tuned-
-              </span>
-            </h1>
+          <div className="text-white text-center md:text-7xl  md:px-8 mb-36 md:mt-0 mt-16 text-5xl">
+            <div className="relative">
+              {/* <div className="m-auto absolute top-0 right-0 left-0 bottom-0 "> */}
+              <CircleBg id="circle" />
+              {/* </div> */}
+              <h1
+                id="banner"
+                className=" absolute top-0 bottom-0 m-auto left-0 right-0 h-fit xs:text-5xl text-4xl  "
+              >
+                <span>
+                  Here is a sneak-peak <br />
+                  of our work.
+                  <br /> And<span className="text-[#fe424c]"> the best</span> is
+                  yet to come!
+                  <br />
+                  <br />
+                </span>
+                <span className=" text-[#00a3bb]" id="banner-span">
+                  -Stay Tuned-
+                </span>
+              </h1>
+              {/* </CircleBg> */}
+            </div>
           </div>
         </AlignContainer>
 
