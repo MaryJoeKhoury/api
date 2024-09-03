@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import parse from "html-react-parser";
 import { useEffect } from "react";
-import { animateBannerMessage } from "@/utils/animation";
+import { animateBannerMessage, animateHomeCards } from "@/utils/animation";
 
 export default function Home({ metas, data, links }) {
   console.log(metas);

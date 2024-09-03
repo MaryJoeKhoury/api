@@ -1,38 +1,34 @@
-import React from "react";
 import Image from "next/image";
-import { Fullscreen } from "lucide-react";
+import { useEffect } from "react";
+import { animateCards } from "@/utils/animation";
 
 export const Card = (props) => {
+  useEffect(() => {
+    animateCards();
+  }, []);
+
   return (
-    <li className={`${props.width}`}>
+    <li className={`${props.width} card-container`}>
       <a
         href={props.link}
-        className={`flex  flex-col  items-start  justify-center gap-4  ${props.padding} group`}
+        className={`flex flex-col items-start justify-center gap-4 ${props.padding} group card-reveal`}
       >
-        {/* <div className="xl:w-[512px] xl:h-[300px] sm:w-[384px] sm:h-[200px] md:h-[195px] md:w-[295px] lg:w-[385px] lg:h-[295px]"> */}
-        <div className={` ${props.size} overflow-hidden`}>
-          {/* <img src={props.image} /> */}
+        <div className={`${props.size} overflow-hidden`}>
           <Image
             src={props.image}
             width={1200}
             height={700}
             alt="Picture of the author"
             style={{ objectFit: "cover", height: "100%" }}
-            // layout="fill"
-            className="  hover:scale-110 transition-transform duration-500 "
+            className="hover:scale-110 transition-transform duration-500 card-image"
           />
         </div>
 
-        <h1 className={` my-2  text-2xl  font-bold ${props.margin}`}>
+        <h1 className={`my-2 text-2xl font-bold ${props.margin}`}>
           {props.title}
         </h1>
         <div className="text-xl font-semibold">{props.description}</div>
-        <div
-          className="text-sm group-hover:underline
-        "
-        >
-          {props.date}
-        </div>
+        <div className="text-sm group-hover:underline">{props.date}</div>
       </a>
     </li>
   );
