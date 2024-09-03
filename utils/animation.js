@@ -5,18 +5,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const animateBannerMessage = () => {
   const bannerMessage = document.getElementById("banner");
+  const bannerImage = document.getElementById("circle");
   const bannerSpan = document.getElementById("banner-span");
 
   gsap.fromTo(
-    [bannerMessage],
+    [bannerMessage, bannerImage],
     { scale: 0, rotation: 0 },
     { scale: 1, rotation: 360, duration: 1 }
   );
-  gsap.fromTo(
-    "#circle",
-    { rotation: 360, x: -700, duration: 0.5, y: -200 },
-    { rotation: 0, x: 0, duration: 1, y: 0 }
-  );
+  // gsap.fromTo(
+  //   "#circle",
+  //   { rotation: 360, x: -700, duration: 0.5, y: -200 },
+  //   { rotation: 0, x: 0, duration: 1, y: 0 }
+  // );
 };
 
 // export const animateCards = () => {
