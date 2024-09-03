@@ -5,18 +5,24 @@ import Map from "@/components/svgs/Map";
 import Phone from "@/components/svgs/Phone";
 import Email from "@/components/svgs/Email";
 import axios from "@/utils/axios";
+import { useEffect } from "react";
+import { animateTextImage } from "@/utils/animation";
+import Image from "next/image";
 
 export default function Contact({ metas, links }) {
+  useEffect(() => {
+    animateTextImage();
+  });
   return (
     <>
       <NavBar image={metas.data.seo_image} />
 
       <main className=" font-Poppins">
         <AlignContainer>
-          <div className="text-white flex md:flex-row md:justify-between my-12 flex-col md:items-stretch items-center gap-12">
+          <div className="text-white flex md:flex-row md:justify-between my-12 flex-col md:items-stretch items-center gap-12 ">
             <div className="md:w-1/2">
               <h1 className="md:text-5xl text-4xl mb-12 decoration-wavy">
-                Let's Get In Touch!
+                Let's Get <span className=" text-[#fe424c]">In Touch!</span>
               </h1>
               <ul className="flex flex-col gap-12">
                 <li className="flex flex-row gap-4 items-center md:pr-8">
@@ -86,6 +92,60 @@ export default function Contact({ metas, links }) {
                 className="bg-[#fe424c] cursor-pointer outline-none w-fit mx-auto px-4 py-2  rounded-lg text-white hover:bg-opacity-50"
               />
             </form>
+          </div>
+          <div className="text-white flex md:flex-row gap-8 items-center md:flex-nowrap flex-col-reverse justify-center mt-28">
+            <div className="md:w-1/2" id="box">
+              {/* <img src="/images/art.jpg" /> */}
+              <Image
+                src="/images/art.jpg"
+                width={1000}
+                height={1000}
+                alt="review image"
+                className="w-fit "
+              />
+            </div>
+            <div className="md:w-1/2" id="box">
+              <h1 className="lg:text-5xl text-4xl  text-center mb-12">
+                Let's <span className=" text-[#fe424c]">Collaborate</span>
+              </h1>
+              <p className="text-2xl text-center md:text-justify before:content-['\275D'] before:text-[#fe424c] md:before:text-4xl  before:text-3xl before:mt-9 before:h-fit  after:content-['\275E'] after:text-[#fe424c] md:after:text-4xl before:align-middle after:align-middle  after:text-3xl before:mr-2 after:ml-2">
+                Have a vision or an idea that needs to be brought to life? We're
+                here to turn your concepts into cinematic experiences. Whether
+                you're a seasoned filmmaker or just starting out, our team is
+                passionate about storytelling and ready to collaborate with you
+                on your next project. Reach out to us, and let's make something
+                unforgettable together!
+              </p>
+            </div>
+          </div>
+          <div
+            className="text-white flex flex-row gap-8 items-center md:flex-nowrap flex-wrap justify-center md:mt-28 mt-14"
+            id="container"
+          >
+            <div className="md:w-1/2" id="box2">
+              <h1 className="lg:text-5xl text-4xl  text-center mb-12">
+                Visit Our <span className=" text-[#fe424c]">Studio</span>
+              </h1>
+              <p className="text-2xl md:text-justify text-center before:content-['\275D'] before:text-[#fe424c] md:before:text-4xl  before:text-3xl before:mt-9 before:h-fit  after:content-['\275E'] after:text-[#fe424c] md:after:text-4xl before:align-middle after:align-middle  after:text-3xl before:mr-2 after:ml-2">
+                Our doors are open to filmmakers, storytellers, and creative
+                minds alike. Located in the heart of
+                <span className=" text-[#fe424c]"> "City"</span>, our
+                state-of-the-art studio is equipped with everything you need to
+                bring your vision to the screen. Schedule a visit, and explore
+                where the magic happens. We're excited to welcome you to our
+                creative space!
+              </p>
+            </div>
+            <div className="md:w-1/2" id="box2">
+              {/* <img src="/images/starry-night.jpg" /> */}
+              <Image
+                src="/images/starry-night.jpg"
+                width={1000}
+                height={1000}
+                alt="review image"
+                className="w-fit "
+              />
+            </div>
           </div>
         </AlignContainer>
       </main>

@@ -81,3 +81,45 @@ export const animateCards = () => {
     }
   );
 };
+
+export const animateTextImage = () => {
+  gsap.fromTo(
+    "#box",
+    {
+      duration: 0.5,
+      scale: 0,
+      y: -100,
+      stagger: 0.1,
+      ease: "back.out",
+    },
+    {
+      duration: 0.5,
+      scale: 1,
+      y: 0,
+      stagger: 0.3,
+      ease: "back.out",
+    }
+  );
+  gsap.fromTo(
+    "#box2",
+    {
+      duration: 0.5,
+      scale: 0,
+      y: -100,
+      stagger: 0.1,
+      ease: "back.out",
+    },
+    {
+      duration: 0.5,
+      scale: 1,
+      y: 0,
+      stagger: 0.3,
+      ease: "back.out",
+      scrollTrigger: {
+        trigger: "#container",
+        start: "top 80%",
+        toggleActions: "play none none none ",
+      },
+    }
+  );
+};
