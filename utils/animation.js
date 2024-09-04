@@ -70,7 +70,7 @@ export const animateCards = () => {
       ease: "power1.inOut",
       stagger: {
         grid: [7, 15],
-        from: "center",
+        from: "top",
         amount: 1,
       },
       scrollTrigger: {
