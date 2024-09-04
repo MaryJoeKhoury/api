@@ -26,7 +26,7 @@ const ScrollUp = () => {
       <button
         className={
           button
-            ? "fixed bottom-2 right-2 z-10 md:hover:opacity-70 duration-150"
+            ? "fixed bottom-6 right-6 z-10 md:hover:opacity-70 duration-150"
             : "hidden scale-0"
         }
         onClick={() => scrollToTop()}
