@@ -86,13 +86,13 @@ const Testemonial = (props) => {
           />
           <div className="bg-white flex flex-row justify-end gap-4 w-fit ml-auto absolute right-0 bottom-0 px-12 py-6 rounded-tl-[30px]">
             <ChevronLeft
-              className="hover:bg-[#fe424c] rounded-full cursor-pointer bg-[#ffbdc0] transition-all"
+              className="bg-[#fe424c] rounded-full cursor-pointer hover:bg-[#ffbdc0] transition-all"
               width={40}
               height={40}
               onClick={() => swiper.slidePrev()}
             />
             <ChevronRight
-              className="hover:bg-[#fe424c] rounded-full cursor-pointer bg-[#ffbdc0] transition-all "
+              className="bg-[#fe424c] rounded-full cursor-pointer hover:bg-[#ffbdc0] transition-all "
               width={40}
               height={40}
               onClick={() => swiper.slideNext()}

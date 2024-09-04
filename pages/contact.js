@@ -108,7 +108,7 @@ export default function Contact({ metas, links }) {
               <h1 className="lg:text-5xl text-4xl  text-center mb-12">
                 Let's <span className=" text-[#fe424c]">Collaborate</span>
               </h1>
-              <p className="text-2xl text-center md:text-justify before:content-['\275D'] before:text-[#fe424c] md:before:text-4xl  before:text-3xl before:mt-9 before:h-fit  after:content-['\275E'] after:text-[#fe424c] md:after:text-4xl before:align-middle after:align-middle  after:text-3xl before:mr-2 after:ml-2">
+              <p className="text-2xl text-center md:text-justify before:content-['\275D'] before:text-[#fe424c] md:before:text-4xl  before:text-3xl before:mt-9 before:h-fit  after:content-['\275E'] after:text-[#fe424c] md:after:text-4xl before:align-middle after:align-middle  after:text-3xl before:mr-1 after:ml-1">
                 Have a vision or an idea that needs to be brought to life? We're
                 here to turn your concepts into cinematic experiences. Whether
                 you're a seasoned filmmaker or just starting out, our team is
@@ -126,7 +126,7 @@ export default function Contact({ metas, links }) {
               <h1 className="lg:text-5xl text-4xl  text-center mb-12">
                 Visit Our <span className=" text-[#fe424c]">Studio</span>
               </h1>
-              <p className="text-2xl md:text-justify text-center before:content-['\275D'] before:text-[#fe424c] md:before:text-4xl  before:text-3xl before:mt-9 before:h-fit  after:content-['\275E'] after:text-[#fe424c] md:after:text-4xl before:align-middle after:align-middle  after:text-3xl before:mr-2 after:ml-2">
+              <p className="text-2xl md:text-justify text-center before:content-['\275D'] before:text-[#fe424c] md:before:text-4xl  before:text-3xl before:mt-9 before:h-fit  after:content-['\275E'] after:text-[#fe424c] md:after:text-4xl before:align-middle after:align-middle  after:text-3xl before:mr-1 after:ml-1">
                 Our doors are open to filmmakers, storytellers, and creative
                 minds alike. Located in the heart of
                 <span className=" text-[#fe424c]"> "City"</span>, our
