@@ -40,8 +40,8 @@ const NavBar = (props) => {
                   href="/about"
                   className={`${
                     pathname === "/about"
-                      ? "relative after:absolute after:h-[2px]  after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 after:w-2/4 translate-x-1 text-white after:inset-5 after:scale-1 "
-                      : "relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                      ? "relative after:absolute after:h-[2px]  after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-0 after:left-0 after:w-2/4 translate-x-1 text-white after:inset-5 after:scale-1 "
+                      : "relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-0 after:left-0 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                   } `}
                 >
                   about us
@@ -52,8 +52,8 @@ const NavBar = (props) => {
                   href="/work"
                   className={`${
                     pathname === "/work"
-                      ? "relative after:absolute after:h-[2px]  after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 after:w-2/4 translate-x-1 text-white after:inset-5 after:scale-1 "
-                      : "relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                      ? "relative after:absolute after:h-[2px]  after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-0 after:left-0 after:w-2/4 translate-x-1 text-white after:inset-5 after:scale-1 "
+                      : "relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-0 after:left-0 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                   } `}
                 >
                   our work
@@ -64,8 +64,8 @@ const NavBar = (props) => {
                   href="/client"
                   className={`${
                     pathname === "/client"
-                      ? "relative after:absolute after:h-[2px]  after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 after:w-2/4 translate-x-1 text-white after:inset-5 after:scale-1 "
-                      : "relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                      ? "relative after:absolute after:h-[2px]  after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-0 after:left-0 after:w-2/4 translate-x-1 text-white after:inset-5 after:scale-1 "
+                      : "relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-0 after:left-0 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                   } `}
                 >
                   our clients
@@ -76,8 +76,8 @@ const NavBar = (props) => {
                   href="/team"
                   className={`${
                     pathname === "/team"
-                      ? "relative after:absolute after:h-[2px]  after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 after:w-2/4 translate-x-1 text-white after:inset-5 after:scale-1 "
-                      : "relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                      ? "relative after:absolute after:h-[2px]  after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-0 after:left-0 after:w-2/4 translate-x-1 text-white after:inset-5 after:scale-1 "
+                      : "relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-0 after:left-0 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                   } `}
                 >
                   our team
@@ -88,8 +88,8 @@ const NavBar = (props) => {
                   href="/contact"
                   className={`${
                     pathname === "/contact"
-                      ? "relative after:absolute after:h-[2px]  after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 after:w-2/4 translate-x-1 text-white after:inset-5 after:scale-1 "
-                      : "relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                      ? "relative after:absolute after:h-[2px]  after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-0 after:left-0 after:w-2/4 translate-x-1 text-white after:inset-5 after:scale-1 "
+                      : "relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-[#fe424c] after:rounded-md after:m-auto after:right-0 after:left-0 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                   } `}
                 >
                   contact us

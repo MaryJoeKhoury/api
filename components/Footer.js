@@ -15,31 +15,31 @@ const Footer = (props) => {
               <li>
                 <Link
                   href="/about"
-                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-0 after:left-0 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                 >
                   about us
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/"
-                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                  href="/work"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-0 after:left-0 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                 >
                   our work
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                <Link
+                  href="/client"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-0 after:left-0 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                 >
                   our clients
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
                   href="/team"
-                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-0 after:left-0 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                 >
                   our teams
                 </Link>
@@ -47,7 +47,7 @@ const Footer = (props) => {
               <li>
                 <Link
                   href="/contact"
-                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-0 after:left-0 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                 >
                   contact us
                 </Link>
@@ -57,46 +57,11 @@ const Footer = (props) => {
           <div className="sm:w-1/5 w-1/2">
             <h1 className="text-xl mb-6 font-light">offices</h1>
             <ul className="font-semibold">
-              <li>
-                <a
-                  href="#"
-                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
-                >
-                  beirut,LEBANON
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
-                >
-                  moscow,RUSSIA
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="relative after:absolute after:h-[2px]  after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
-                >
-                  paris,FRANCE
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
-                >
-                  berlin,GERMANY
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
-                >
-                  madrid,SPAIN
-                </a>
-              </li>
+              <li>beirut,LEBANON</li>
+              <li>moscow,RUSSIA </li>
+              <li>paris,FRANCE</li>
+              <li>berlin,GERMANY</li>
+              <li>madrid,SPAIN</li>
             </ul>
           </div>
           <div className="sm:ml-auto pr-16">
@@ -106,8 +71,8 @@ const Footer = (props) => {
             <ul>
               <li>
                 <a
-                  href="#"
-                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+                  href="mailto:test@test.com"
+                  className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-0 after:left-0 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
                 >
                   test@test.com
                 </a>
@@ -118,7 +83,7 @@ const Footer = (props) => {
         <div className="flex sm:flex-row flex-col  sm:items-center items-start sm:gap-0 gap-4 justify-between mt-6">
           <div className="flex flex-row text-4xl items-center gap-4 ">
             <div>
-              <a href="#">LOGO</a>{" "}
+              <Link href="/">LOGO</Link>
             </div>
             <span className=" h-10 border-solid border-[1px] border-white rounded-lg"></span>
             <a href={props.linkedin}>
@@ -128,10 +93,20 @@ const Footer = (props) => {
               <Instagram />
             </a>
           </div>
-          <div className="flex flex-row text-sm items-center gap-2 relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-4 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150">
-            <a href="#">privacy policy</a>
-            <span className=" h-6 border-solid border-[1px] border-white rounded-lg"></span>
-            <a href="#">terms and conditions</a>
+          <div className="flex flex-row text-sm items-center gap-2  ">
+            <a
+              href="#"
+              className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-0 after:left-0 hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+            >
+              privacy policy
+            </a>
+            <span className=" h-6 border-solid border-[1px] ml-2 border-white rounded-lg"></span>
+            <a
+              href="#"
+              className="relative after:absolute after:h-[2px] after:w-0 after:-bottom-2 after:bg-white after:rounded-md after:m-auto after:right-0 after:left-0  hover:after:w-2/4 translate-x-1 duration-150 hover:text-white after:inset-5 after:scale-1 after:duration-150"
+            >
+              terms and conditions
+            </a>
           </div>
         </div>
       </AlignContainer>
