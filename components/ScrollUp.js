@@ -6,12 +6,12 @@ const ScrollUp = () => {
 
   useEffect(() => {
     const makeButtonVisible = () => {
-      const isVisible = window.scrollY > 10; // Adjust threshold as needed
+      const isVisible = window.scrollY > 10;
       setButton(isVisible);
     };
 
     window.addEventListener("scroll", makeButtonVisible);
-    return () => window.removeEventListener("scroll", makeButtonVisible); // Corrected cleanup
+    return () => window.removeEventListener("scroll", makeButtonVisible);
   }, []);
 
   const scrollToTop = () => {
@@ -26,7 +26,7 @@ const ScrollUp = () => {
       <button
         className={
           button
-            ? "fixed bottom-2 right-2 z-10 hover:opacity-70 duration-150"
+            ? "fixed bottom-2 right-2 z-10 md:hover:opacity-70 duration-150"
             : "hidden scale-0"
         }
         onClick={() => scrollToTop()}
