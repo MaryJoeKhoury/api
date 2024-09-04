@@ -5,10 +5,13 @@ import AlignContainer from "@/components/AlignContainer";
 import axios from "@/utils/axios";
 import Modal from "@/components/Modal";
 import Image from "next/image";
+import ScrollUp from "@/components/ScrollUp";
+
 export default function Work({ metas, links }) {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
+      <ScrollUp />
       <NavBar image={metas.data.seo_image} />
       <main className=" font-Poppins">
         <div className="relative mb-8">

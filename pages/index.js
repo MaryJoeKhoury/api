@@ -8,6 +8,7 @@ import parse from "html-react-parser";
 import { useEffect } from "react";
 import { animateBannerMessage, animateHomeCards } from "@/utils/animation";
 import CircleBg, { Circle } from "@/components/svgs/CircleBg";
+import ScrollUp from "@/components/ScrollUp";
 
 export default function Home({ metas, data, links }) {
   console.log(metas);
@@ -17,6 +18,7 @@ export default function Home({ metas, data, links }) {
 
   return (
     <>
+      <ScrollUp />
       <NavBar image={metas.data.seo_image} />
       <main className=" font-Poppins">
         <AlignContainer>

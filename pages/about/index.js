@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import ScrollUp from "@/components/ScrollUp";
 
 export default function About({ data, metas }) {
   const [swiperRef, setSwiperRef] = useState(null);
@@ -17,6 +18,7 @@ export default function About({ data, metas }) {
   }, []);
   return (
     <>
+      <ScrollUp />
       <NavBar image={metas.data.seo_image} />
       <main className=" font-Poppins">
         <div className=" py-16 mb-12">

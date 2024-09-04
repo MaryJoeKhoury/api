@@ -6,6 +6,7 @@ import AlignContainer from "@/components/AlignContainer";
 import CardContainer from "@/components/CardContainer";
 import { Card } from "@/components/Card";
 import axios from "@/utils/axios";
+import ScrollUp from "@/components/ScrollUp";
 
 const accordionInfo = [
   {
@@ -120,6 +121,7 @@ export default function Team({ metas, links }) {
   };
   return (
     <>
+      <ScrollUp />
       <NavBar image={metas.data.seo_image} />
       <main className=" font-Poppins">
         {accordionInfo.map((info) => (

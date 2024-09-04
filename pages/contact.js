@@ -8,13 +8,14 @@ import axios from "@/utils/axios";
 import { useEffect } from "react";
 import { animateTextImage } from "@/utils/animation";
 import Image from "next/image";
-
+import ScrollUp from "@/components/ScrollUp";
 export default function Contact({ metas, links }) {
   useEffect(() => {
     animateTextImage();
   });
   return (
     <>
+      <ScrollUp />
       <NavBar image={metas.data.seo_image} />
 
       <main className=" font-Poppins">

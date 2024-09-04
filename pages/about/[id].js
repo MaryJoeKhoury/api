@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import AlignContainer from "@/components/AlignContainer";
 import Link from "next/link";
 import Image from "next/image";
-
+import ScrollUp from "@/components/ScrollUp";
 export default function Page() {
   const router = useRouter();
   const { id } = router.query;
@@ -60,6 +60,7 @@ export default function Page() {
 
   return (
     <>
+      <ScrollUp />
       <NavBar image={metas?.seo_image} />
       <main className=" font-Poppins">
         <AlignContainer>

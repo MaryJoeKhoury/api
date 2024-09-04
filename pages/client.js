@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import { EffectFade, Navigation, Pagination } from "swiper/modules";
+import ScrollUp from "@/components/ScrollUp";
 
 const testemonialInfo = [
   {
@@ -57,6 +58,8 @@ const testemonialInfo = [
 export default function Client({ metas, links }) {
   return (
     <>
+      {" "}
+      <ScrollUp />
       <NavBar image={metas.data.seo_image} />
       <main className=" font-Poppins">
         <AlignContainer>
